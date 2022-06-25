@@ -1,8 +1,7 @@
-import Nav from "../../Components/Nav/Nav";
 function Home() {
     return (
         <div>
-            <Nav />
+            stuff
         </div>
     );
 }
