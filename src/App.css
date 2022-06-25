@@ -14,3 +14,10 @@
     --fs-s: 15px;
     --fs-xs: 13px;
 }
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bc-1);
+}
