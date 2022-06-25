@@ -1,0 +1,15 @@
+nav {
+    background-color: var(--bc-1);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+}
+
+nav a {}
+
+.nav-section-links {}
+
+.nav-section-link {}
+
+.nav-resume-btn {}

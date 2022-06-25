@@ -1,16 +1,16 @@
 :root {
     /*background colors*/
-    --bc-1: "#330D64";
-    --bc-2: "#300B5F";
+    --bc-1: #330D64;
+    --bc-2: #300B5F;
     /*font colors*/
-    --fc-1: "#FDF8DF";
-    --fc-2: "#FFE16D";
-    --fc-3: "#3FB1B1";
+    --fc-1: #FDF8DF;
+    --fc-2: #FFE16D;
+    --fc-3: #3FB1B1;
     /*font sizes*/
-    --fs-xxl: "80px";
-    --fs-xl: "62px";
-    --fs-l: "32px";
-    --fs-m: "20px";
-    --fs-s: "15px";
-    --fs-xs: "13px";
+    --fs-xxl: 80px;
+    --fs-xl: 62px;
+    --fs-l: 32px;
+    --fs-m: 20px;
+    --fs-s: 15px;
+    --fs-xs: 13px;
 }
