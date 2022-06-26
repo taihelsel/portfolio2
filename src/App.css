@@ -2,10 +2,12 @@
     /*background colors*/
     --bc-1: #330D64;
     --bc-2: #300B5F;
+    --bc-3: #250A4A;
     /*font colors*/
     --fc-1: #FDF8DF;
     --fc-2: #FFE16D;
     --fc-3: #3FB1B1;
+    --grey: #8B8B8B;
     /*font sizes*/
     --fs-xxl: 80px;
     --fs-xl: 62px;
