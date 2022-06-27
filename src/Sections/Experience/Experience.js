@@ -43,7 +43,6 @@ const experienceData = {
 }
 function Experience() {
     const defaultExp = experienceData[Object.keys(experienceData)[0]];
-    console.log(defaultExp);
     const [selectedExp, setSelectedExp] = useState(defaultExp);
     const loadSelectedExpData = (selectedExp) => {
         const { title, date, desc, skills } = selectedExp;
@@ -65,6 +64,20 @@ function Experience() {
             </div>
         )
     }
+    const handleControlClick = title => e => {
+        e.preventDefault();
+        if (selectedExp.company !== title) {
+            setSelectedExp(experienceData[title]);
+        }
+    }
+    const loadControls = (titles) => {
+        return titles.map((title, index) => {
+            console.log("title", title);
+            return (
+                <li key={`exp-control-${title}-${index}`} id={title === selectedExp.company ? "experience-controls-selected" : ""}><a onClick={handleControlClick(title)} href="">{title}</a></li>
+            )
+        });
+    }
     return (
         <section id="Experience">
             <div className="section-content">
@@ -74,9 +87,7 @@ function Experience() {
                 </div>
                 <div id="experience-content">
                     <ul id="experience-controls">
-                        <li id="experience-controls-selected"><a href="">Sentry Data Systems</a></li>
-                        <li><a href="">RTRT.me</a></li>
-                        <li><a href="">Freelance Web Development</a></li>
+                        {loadControls(Object.keys(experienceData))}
                     </ul>
                     {loadSelectedExpData(selectedExp)}
                 </div>
