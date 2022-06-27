@@ -1,10 +1,11 @@
 import "./Terminal.css";
 import React, { useState, useEffect } from "react";
-function Terminal({ colorFirstName, showRadTitle }) {
+function Terminal({ colorFirstName, showRadTitle, animateRadTitle }) {
     const [previousCode, setPreviousCode] = useState([]);
     const [currentCode, setCurrentCode] = useState("");
     const [nameColored, setNameColored] = useState(false);
     const [titleShowing, setTitleShowing] = useState(false);
+    const [animateTitle, setAnimateTitle] = useState(false);
     const codeToPrint = [
         {
             arg: `document.getElementById("SuperRadTitle").style.display="block";`,
@@ -12,6 +13,14 @@ function Terminal({ colorFirstName, showRadTitle }) {
             exe: function () {
                 setTitleShowing(true);
                 showRadTitle();
+            }
+        },
+        {
+            arg: `animateRadTitle()";`,
+            result: "animateRadTitle()",
+            exe: function () {
+                setAnimateTitle(true);
+                animateRadTitle();
             }
         },
         {
@@ -96,6 +105,7 @@ function Terminal({ colorFirstName, showRadTitle }) {
                     /*<br />
                     TODO<br />
                     [{titleShowing ? "x" : " "}] - Show Title<br />
+                    [{nameColored ? "x" : " "}] - Animate Title<br />
                     [{nameColored ? "x" : " "}] - Color Name<br />
                     */
                 </p>

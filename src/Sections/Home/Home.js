@@ -5,6 +5,7 @@ function Home() {
     const titles = ["React", "HTML", "CSS", "JavaScript", "Node.js"];
     const [showTitle, setShowTitle] = useState(false);
     const [titleText, setTitleText] = useState("");
+    const [animateTitle, setAnimateTitle] = useState(false);
     const [firstNameColor, setFirstNameColor] = useState(`var(--fc-1)`);
     const addCharToTitle = (title, charIndex) => {
         setTitleText((prevState) => prevState + title[charIndex]);
@@ -45,7 +46,6 @@ function Home() {
                                     doneWordInReverse = false;
                                     doingWordInReverse = false;
                                     donePausing = false;
-                                    console.log("next word");
                                 }
                             } else {
                                 doingWordInReverse = true;
@@ -62,7 +62,6 @@ function Home() {
 
                     } else {
                         //add next char
-                        console.log("add char");
                         addCharToTitle(currentTitle, charIndex);
                         charIndex++;
                     }
@@ -70,13 +69,16 @@ function Home() {
             }, 100);
         }
 
-    }, [showTitle])
+    }, [animateTitle])
 
     const colorFirstName = (color) => {
         setFirstNameColor(color);
     }
     const showRadTitle = () => {
         setShowTitle(true);
+    }
+    const animateRadTitle = () => {
+        setAnimateTitle(true);
     }
     return (
         <section id="Home">
@@ -90,7 +92,7 @@ function Home() {
                 </p>
             </div>
             <div className="home-right">
-                <Terminal colorFirstName={colorFirstName} showRadTitle={showRadTitle} />
+                <Terminal colorFirstName={colorFirstName} showRadTitle={showRadTitle} animateRadTitle={animateRadTitle} />
             </div>
         </section >
     );
