@@ -1,5 +1,70 @@
 import "./Experience.css";
+import React, { useState } from "react";
+const experienceData = {
+    "Sentry Data Systems": {
+        title: "Production Support Analyst",
+        date: "June 2019 - November 2021",
+        desc: [
+            "Designed and developed tools that made the daily workload\nmore efficient",
+            "Developed jobs to automate daily tasks",
+            "Performed daily system health checks",
+            "Created documentation for internal tools",
+            "Identify and resolve errors in data ingestion feeds",
+        ],
+        skills: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
+        company: "Sentry Data Systems",
+    },
+    "RTRT.me": {
+        title: "Web Developer",
+        date: "AA 201239 - AAA 2323",
+        desc: [
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+        ],
+        skills: "blah blah blah",
+        company: "RTRT.me",
+    },
+    "Freelance Web Development": {
+        title: "Web Developer",
+        date: "BBBB 23232 - BBBB 2323",
+        desc: [
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum",
+        ],
+        skills: "asdfasdfasdfblah",
+        company: "Freelance Web Development",
+    },
+}
 function Experience() {
+    const defaultExp = experienceData[Object.keys(experienceData)[0]];
+    console.log(defaultExp);
+    const [selectedExp, setSelectedExp] = useState(defaultExp);
+    const loadSelectedExpData = (selectedExp) => {
+        const { title, date, desc, skills } = selectedExp;
+        return (
+            <div id="experience-details">
+                <div id="experience-details-title">
+                    <h2>{title}</h2>
+                    <p className="experience-details-text">{date}</p >
+                </div>
+                <ul id="experience-details-list">
+                    {desc.map((detail, index) => {
+                        return <li className="experience-details-text" key={`${selectedExp}-detail-${index}`}>{detail}</li>
+                    })}
+                </ul>
+                <div id="experience-details-skills">
+                    <h2>Skills</h2>
+                    <p className="experience-details-text">{skills}</p>
+                </div>
+            </div>
+        )
+    }
     return (
         <section id="Experience">
             <div className="section-content">
@@ -13,23 +78,7 @@ function Experience() {
                         <li><a href="">RTRT.me</a></li>
                         <li><a href="">Freelance Web Development</a></li>
                     </ul>
-                    <div id="experience-details">
-                        <div id="experience-details-title">
-                            <h2>Production Support Analyst</h2>
-                            <p className="experience-details-text">June 2019 - November 2021 </p >
-                        </div>
-                        <ul id="experience-details-list">
-                            <li className="experience-details-text">Designed and developed tools that made the daily workload
-                                more efficient
-                            </li>
-                            <li className="experience-details-text">Developed jobs to automate daily tasks
-                            </li>
-                        </ul>
-                        <div id="experience-details-skills">
-                            <h2>Skills</h2>
-                            <p className="experience-details-text">Git, HTML, CSS, JavaScript, Powershell, and Ruby</p>
-                        </div>
-                    </div>
+                    {loadSelectedExpData(selectedExp)}
                 </div>
             </div>
         </section>
