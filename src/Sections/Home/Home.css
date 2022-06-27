@@ -3,6 +3,8 @@
     flex-direction: row;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .home-left {
@@ -10,6 +12,13 @@
     flex-direction: column;
     margin-left: 140px;
     flex: 1;
+    z-index: 1;
+}
+
+.home-right {
+    margin-right: 140px;
+    flex: 1.2;
+    z-index: 1;
 }
 
 #home-head-container {
@@ -39,7 +48,13 @@
     margin-top: 20px;
 }
 
-.home-right {
-    margin-right: 140px;
-    flex: 1.2;
+#home-divider {
+    width: 118%;
+    height: 126%;
+    position: absolute;
+    top: 42%;
+    left: -28%;
+    background-color: var(--bc-2);
+    z-index: 0;
+    transform: rotate(53deg);
 }

@@ -113,6 +113,7 @@ function Home() {
             <div className="home-right">
                 <Terminal colorFirstName={colorFirstName} showRadTitle={showRadTitle} animateRadTitle={animateRadTitle} />
             </div>
+            <div id="home-divider"></div>
         </section >
     );
 }
