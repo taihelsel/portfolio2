@@ -56,4 +56,5 @@ body {
 .section-content {
     margin: 0 140px;
     display: flex;
+    flex: 1;
 }

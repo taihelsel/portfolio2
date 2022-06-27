@@ -86,10 +86,15 @@ function Experience() {
                     <hr />
                 </div>
                 <div id="experience-content">
-                    <ul id="experience-controls">
-                        {loadControls(Object.keys(experienceData))}
-                    </ul>
-                    {loadSelectedExpData(selectedExp)}
+                    <div id="experience-left">
+                        <ul id="experience-controls">
+                            {loadControls(Object.keys(experienceData))}
+                        </ul>
+                    </div>
+                    <div id="experience-right">
+                        {loadSelectedExpData(selectedExp)}
+                    </div>
+
                 </div>
             </div>
         </section>

@@ -8,6 +8,16 @@
     flex-direction: column;
 }
 
+#experience-right {
+    display: flex;
+    flex: 3.2;
+}
+
+#experience-left {
+    display: flex;
+    flex: 1;
+}
+
 #experience-content {
     display: flex;
     flex-direction: row;
