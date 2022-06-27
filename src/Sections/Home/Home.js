@@ -17,7 +17,9 @@ function Home() {
             let charIndex = 0;
             let doneWordInReverse = false;
             let doingWordInReverse = false;
+            let donePausing = false;
             let titleIndex = 0;
+            let pausesBeforeDeletingWord = 0;
             const animation = setInterval(() => {
                 const currentTitle = titles[titleIndex];
                 if (titleIndex >= titles.length - 1 && charIndex > currentTitle.length - 1) {
@@ -25,29 +27,39 @@ function Home() {
                     clearInterval(animation);
                 } else {
                     if (charIndex > currentTitle.length - 1 || doingWordInReverse === true) {
-                        //check if the prev word has been removed before going to next word.
-                        if (doneWordInReverse) {
-                            //done with current title
-                            charIndex = 0;
-                            if (titleIndex < titles.length - 1) {
-                                //next title
-                                titleIndex++;
-                                setTitleText("");
-                                doneWordInReverse = false;
-                                doingWordInReverse = false;
-                                console.log("next word");
+                        if (donePausing === false) {
+                            pausesBeforeDeletingWord++;
+                            if (pausesBeforeDeletingWord > 10) {
+                                pausesBeforeDeletingWord = 0
+                                donePausing = true;
                             }
                         } else {
-                            doingWordInReverse = true;
-                            if (charIndex >= 0) {
-                                //remove prev char
-                                removeCharFromTitle();
-                                charIndex--;
+                            //check if the prev word has been removed before going to next word.
+                            if (doneWordInReverse) {
+                                //done with current title
+                                charIndex = 0;
+                                if (titleIndex < titles.length - 1) {
+                                    //next title
+                                    titleIndex++;
+                                    setTitleText("");
+                                    doneWordInReverse = false;
+                                    doingWordInReverse = false;
+                                    donePausing = false;
+                                    console.log("next word");
+                                }
                             } else {
-                                //done removing all of current word. go next word.
-                                doneWordInReverse = true;
+                                doingWordInReverse = true;
+                                if (charIndex >= 0) {
+                                    //remove prev char
+                                    removeCharFromTitle();
+                                    charIndex--;
+                                } else {
+                                    //done removing all of current word. go next word.
+                                    doneWordInReverse = true;
+                                }
                             }
                         }
+
                     } else {
                         //add next char
                         console.log("add char");
@@ -55,7 +67,7 @@ function Home() {
                         charIndex++;
                     }
                 }
-            }, 170);
+            }, 100);
         }
 
     }, [showTitle])
