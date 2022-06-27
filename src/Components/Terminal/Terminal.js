@@ -1,14 +1,16 @@
 import "./Terminal.css";
 import React, { useState, useEffect } from "react";
 function Terminal({ colorFirstName, showRadTitle }) {
-    const test = () => {
-        console.log("Test");
-    }
+    const [previousCode, setPreviousCode] = useState([]);
+    const [currentCode, setCurrentCode] = useState("");
+    const [nameColored, setNameColored] = useState(false);
+    const [titleShowing, setTitleShowing] = useState(false);
     const codeToPrint = [
         {
             arg: `document.getElementById("SuperRadTitle").style.display="block";`,
             result: "block",
             exe: function () {
+                setTitleShowing(true);
                 showRadTitle();
             }
         },
@@ -16,13 +18,11 @@ function Terminal({ colorFirstName, showRadTitle }) {
             arg: `document.getElementById("SuperRadFirstName").style.color = "var(--fc-3)";`,
             result: "var(--fc-3)",
             exe: function () {
+                setNameColored(true);
                 colorFirstName("var(--fc-3)");
             }
         },
     ]
-    const [doneLoading, setDoneLoading] = useState(false);
-    const [previousCode, setPreviousCode] = useState([]);
-    const [currentCode, setCurrentCode] = useState("");
     useEffect(() => {
         let codeToPrintIndex = 0;
         let letterIndex = 0;
@@ -63,7 +63,6 @@ function Terminal({ colorFirstName, showRadTitle }) {
                         blink = 0;
                     } else {
                         //done with loop
-                        setDoneLoading(true);
                         clearInterval(animationInterval);
                     }
                 }
@@ -96,9 +95,8 @@ function Terminal({ colorFirstName, showRadTitle }) {
                 <p>
                     /*<br />
                     TODO<br />
-                    [{doneLoading ? "x" : " "}] - Cool landing page<br />
-                    [ ] - Experience<br />
-                    [ ] - Projects<br />
+                    [{titleShowing ? "x" : " "}] - Show Title<br />
+                    [{nameColored ? "x" : " "}] - Color Name<br />
                     */
                 </p>
                 <ul>
