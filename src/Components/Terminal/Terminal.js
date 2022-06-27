@@ -6,19 +6,19 @@ function Terminal({ colorFirstName, showRadTitle }) {
     }
     const codeToPrint = [
         {
+            arg: `document.getElementById("SuperRadTitle").style.display="block";`,
+            result: "block",
+            exe: function () {
+                showRadTitle();
+            }
+        },
+        {
             arg: `document.getElementById("SuperRadFirstName").style.color = "var(--fc-3)";`,
             result: "var(--fc-3)",
             exe: function () {
                 colorFirstName("var(--fc-3)");
             }
         },
-        {
-            arg: `document.getElementById("SuperRadTitle").style.display="block";`,
-            result: "block",
-            exe: function () {
-                showRadTitle();
-            }
-        }
     ]
     const [doneLoading, setDoneLoading] = useState(false);
     const [previousCode, setPreviousCode] = useState([]);
