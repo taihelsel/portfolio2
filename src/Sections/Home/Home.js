@@ -2,9 +2,9 @@ import "./Home.css";
 import React, { useEffect, useState } from "react";
 import Terminal from "../../Components/Terminal/Terminal";
 function Home() {
-    const titles = ["React", "HTML", "CSS", "JavaScript", "Node.js"];
+    const titles = ["React", "HTML", "CSS", "Git", "JavaScript", "Node.js"];
     const [showTitle, setShowTitle] = useState(false);
-    const [titleText, setTitleText] = useState("");
+    const [titleText, setTitleText] = useState("VSCode");
     const [animateTitle, setAnimateTitle] = useState(false);
     const [firstNameColor, setFirstNameColor] = useState(`var(--fc-1)`);
     const addCharToTitle = (title, charIndex) => {
@@ -21,50 +21,69 @@ function Home() {
             let donePausing = false;
             let titleIndex = 0;
             let pausesBeforeDeletingWord = 0;
+            let firstRun = true;
+            let doingFirstRun = false;
             const animation = setInterval(() => {
                 const currentTitle = titles[titleIndex];
                 if (titleIndex >= titles.length - 1 && charIndex > currentTitle.length - 1) {
                     //done with loop. stop on last word so it's not deleted.
                     clearInterval(animation);
                 } else {
-                    if (charIndex > currentTitle.length - 1 || doingWordInReverse === true) {
-                        if (donePausing === false) {
-                            pausesBeforeDeletingWord++;
-                            if (pausesBeforeDeletingWord > 10) {
-                                pausesBeforeDeletingWord = 0
-                                donePausing = true;
-                            }
+                    if (firstRun === true) {
+                        if (doingFirstRun === false) {
+                            doingFirstRun = true;
+                            charIndex = titleText.length - 1;
+                        }
+                        if (charIndex >= 0) {
+                            //remove prev char
+                            removeCharFromTitle();
+                            charIndex--;
                         } else {
-                            //check if the prev word has been removed before going to next word.
-                            if (doneWordInReverse) {
-                                //done with current title
-                                charIndex = 0;
-                                if (titleIndex < titles.length - 1) {
-                                    //next title
-                                    titleIndex++;
-                                    setTitleText("");
-                                    doneWordInReverse = false;
-                                    doingWordInReverse = false;
-                                    donePausing = false;
+                            //done removing all of current word. go next word.
+                            firstRun = false;
+                            charIndex = 0;
+                        }
+                    } else {
+                        if (charIndex > currentTitle.length - 1 || doingWordInReverse === true) {
+                            if (donePausing === false) {
+                                pausesBeforeDeletingWord++;
+                                if (pausesBeforeDeletingWord > 10) {
+                                    pausesBeforeDeletingWord = 0
+                                    donePausing = true;
                                 }
                             } else {
-                                doingWordInReverse = true;
-                                if (charIndex >= 0) {
-                                    //remove prev char
-                                    removeCharFromTitle();
-                                    charIndex--;
+                                //check if the prev word has been removed before going to next word.
+                                if (doneWordInReverse) {
+                                    //done with current title
+                                    charIndex = 0;
+                                    if (titleIndex < titles.length - 1) {
+                                        //next title
+                                        titleIndex++;
+                                        setTitleText("");
+                                        doneWordInReverse = false;
+                                        doingWordInReverse = false;
+                                        donePausing = false;
+                                    }
                                 } else {
-                                    //done removing all of current word. go next word.
-                                    doneWordInReverse = true;
+                                    doingWordInReverse = true;
+                                    if (charIndex >= 0) {
+                                        //remove prev char
+                                        removeCharFromTitle();
+                                        charIndex--;
+                                    } else {
+                                        //done removing all of current word. go next word.
+                                        doneWordInReverse = true;
+                                    }
                                 }
                             }
-                        }
 
-                    } else {
-                        //add next char
-                        addCharToTitle(currentTitle, charIndex);
-                        charIndex++;
+                        } else {
+                            //add next char
+                            addCharToTitle(currentTitle, charIndex);
+                            charIndex++;
+                        }
                     }
+
                 }
             }, 100);
         }
