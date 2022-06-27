@@ -84,7 +84,7 @@ function Home() {
         <section id="Home">
             <div className="home-left">
                 <div id="home-head-container">
-                    <h1 className="home-title home-head">Hi, I'm </h1><h1 style={{ color: firstNameColor }} className="home-title home-head" id="home-firstname">&nbsp;Tai</h1>
+                    <h1 className="home-title home-head">Hi, I'm </h1><h1 style={{ color: firstNameColor }} className="home-title home-head" id="SuperRadFirstName">&nbsp;Tai</h1>
                 </div>
                 <h2 style={{ display: showTitle ? "block" : "none" }} className="home-title home-subhead">I'm creating with {titleText}</h2>
                 <p className="home-body">

@@ -33,10 +33,6 @@
     font-size: var(--fs-xl);
 }
 
-#home-firstname {
-    color: var(--fc-3);
-}
-
 .home-body {
     color: var(--fc-1);
     font-size: var(--fs-m);
