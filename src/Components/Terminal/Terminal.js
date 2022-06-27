@@ -1,14 +1,23 @@
 import "./Terminal.css";
 import React, { useState, useEffect } from "react";
-function Terminal() {
+function Terminal({ colorFirstName, showRadTitle }) {
     const test = () => {
         console.log("Test");
     }
     const codeToPrint = [
         {
-            arg: `document.getElementById("SuperRadFirstName").style.color = "#E6C300";`,
-            result: "#E6C300",
-            funcCall: test,
+            arg: `document.getElementById("SuperRadFirstName").style.color = "var(--fc-3)";`,
+            result: "var(--fc-3)",
+            exe: function () {
+                colorFirstName("var(--fc-3)");
+            }
+        },
+        {
+            arg: `document.getElementById("SuperRadTitle").style.display="block";`,
+            result: "block",
+            exe: function () {
+                showRadTitle();
+            }
         }
     ]
     const [doneLoading, setDoneLoading] = useState(false);
@@ -23,6 +32,7 @@ function Terminal() {
             if (blink !== false) {
                 if (blinkSets > 5) {
                     blink = false;
+                    blinkSets = 0;
                     setCurrentCode("");
                 } else {
                     if (blinkSets % 2 === 0) {
@@ -43,12 +53,14 @@ function Terminal() {
                     letterIndex++;
                 } else {
                     //check for any more code to print
+                    codeToPrint[codeToPrintIndex].exe();
                     setPreviousCode([...previousCode, codeToPrint[codeToPrintIndex]]);
                     setCurrentCode("");
                     if (codeToPrintIndex < codeToPrint.length - 1) {
                         //done with current code, print next code
                         codeToPrintIndex++;
                         letterIndex = 0;
+                        blink = 0;
                     } else {
                         //done with loop
                         setDoneLoading(true);
@@ -57,7 +69,7 @@ function Terminal() {
                 }
             }
 
-        }, 20);
+        }, 15);
     }, []);
 
     const printCode = (codeIndex, letterIndex) => {

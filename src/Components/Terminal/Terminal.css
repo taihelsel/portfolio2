@@ -12,6 +12,7 @@
     padding-top: 20px;
     padding-bottom: 40px;
     height: 240px;
+    overflow-y: scroll;
 }
 
 #terminal-content p {
