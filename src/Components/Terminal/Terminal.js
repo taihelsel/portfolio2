@@ -105,7 +105,7 @@ function Terminal({ colorFirstName, showRadTitle, animateRadTitle }) {
                     /*<br />
                     TODO<br />
                     [{titleShowing ? "x" : " "}] - Show Title<br />
-                    [{nameColored ? "x" : " "}] - Animate Title<br />
+                    [{animateTitle ? "x" : " "}] - Animate Title<br />
                     [{nameColored ? "x" : " "}] - Color Name<br />
                     */
                 </p>
