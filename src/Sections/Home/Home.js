@@ -6,32 +6,54 @@ function Home() {
     const [showTitle, setShowTitle] = useState(false);
     const [titleText, setTitleText] = useState("");
     const [firstNameColor, setFirstNameColor] = useState(`var(--fc-1)`);
-    const updateTitleText = (title, charIndex) => {
+    const addCharToTitle = (title, charIndex) => {
         setTitleText((prevState) => prevState + title[charIndex]);
+    }
+    const removeCharFromTitle = () => {
+        setTitleText((prevState) => prevState.slice(0, -1));
     }
     useEffect(() => {
         if (showTitle === true) {
             let charIndex = 0;
+            let doneWordInReverse = false;
+            let doingWordInReverse = false;
             let titleIndex = 0;
             const animation = setInterval(() => {
                 const currentTitle = titles[titleIndex];
-                if (charIndex > currentTitle.length - 1) {
-                    //done with current title
-                    charIndex = 0;
-                    if (titleIndex < titles.length - 1) {
-                        //next title
-                        titleIndex++;
-                        setTitleText("");
-                    } else {
-                        console.log(titleIndex >= titles.length - 1, titles.length)
-                        //done with loop
-                        clearInterval(animation);
-                    }
+                if (titleIndex >= titles.length - 1 && charIndex > currentTitle.length - 1) {
+                    //done with loop. stop on last word so it's not deleted.
+                    clearInterval(animation);
                 } else {
-                    //add next char
-                    updateTitleText(currentTitle, charIndex);
-                    charIndex++;
-                    console.log("added char", charIndex)
+                    if (charIndex > currentTitle.length - 1 || doingWordInReverse === true) {
+                        //check if the prev word has been removed before going to next word.
+                        if (doneWordInReverse) {
+                            //done with current title
+                            charIndex = 0;
+                            if (titleIndex < titles.length - 1) {
+                                //next title
+                                titleIndex++;
+                                setTitleText("");
+                                doneWordInReverse = false;
+                                doingWordInReverse = false;
+                                console.log("next word");
+                            }
+                        } else {
+                            doingWordInReverse = true;
+                            if (charIndex >= 0) {
+                                //remove prev char
+                                removeCharFromTitle();
+                                charIndex--;
+                            } else {
+                                //done removing all of current word. go next word.
+                                doneWordInReverse = true;
+                            }
+                        }
+                    } else {
+                        //add next char
+                        console.log("add char");
+                        addCharToTitle(currentTitle, charIndex);
+                        charIndex++;
+                    }
                 }
             }, 170);
         }
