@@ -9,7 +9,7 @@
 #terminal-content {
     background-color: var(--bc-3);
     padding-left: 20px;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
     height: 240px;
 }
@@ -19,6 +19,7 @@
     color: var(--fc-1);
     line-height: 30px;
     margin: 0;
+    margin-bottom: 5px;
 }
 
 #terminal-content ul {

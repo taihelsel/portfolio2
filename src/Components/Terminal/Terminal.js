@@ -1,28 +1,77 @@
 import "./Terminal.css";
+import React, { useState, useEffect } from "react";
 function Terminal() {
+    const test = () => {
+        console.log("Test");
+    }
+    const codeToPrint = [
+        {
+            arg: `document.getElementById("SuperRadFirstName").style.color = "#E6C300";`,
+            result: "#E6C300",
+            funcCall: test,
+        }
+    ]
+    const [doneLoading, setDoneLoading] = useState(false);
+    const [previousCode, setPreviousCode] = useState([]);
+    const [currentCode, setCurrentCode] = useState("");
+    useEffect(() => {
+        let codeToPrintIndex = 0;
+        let letterIndex = 0;
+        const animationInterval = setInterval(() => {
+            printCode(codeToPrintIndex, letterIndex);
+            if (letterIndex < codeToPrint[codeToPrintIndex].arg.length - 1) {
+                letterIndex++;
+            } else {
+                //check for any more code to print
+                setPreviousCode([...previousCode, codeToPrint[codeToPrintIndex]]);
+                setCurrentCode("");
+                if (codeToPrintIndex < codeToPrint.length - 1) {
+                    //done with current code, print next code
+                    codeToPrintIndex++;
+                    letterIndex = 0;
+                } else {
+                    //done with loop
+                    setDoneLoading(true);
+                    clearInterval(animationInterval);
+                }
+            }
+        }, 30);
+    }, []);
+
+    const printCode = (codeIndex, letterIndex) => {
+        const text = codeToPrint[codeIndex].arg[letterIndex];
+        setCurrentCode((prevState) => prevState + text);
+    }
+    const loadPreviousCode = (prevCode) => {
+        return prevCode.map(({ arg, result }, index) => {
+            return [
+                <li className="code-row" key={`coode-row-arg-${index}`}>
+                    <h3 className="code-arrow-right">{`>`}</h3>
+                    <h3 className="code-text">{arg}</h3>
+                </li>,
+                <li className="code-row" key={`coode-row-result-${index}`}>
+                    <h3 className="code-arrow-left">{`<`}</h3>
+                    <h3 className="code-text">'{result}'</h3>
+                </li>
+            ]
+        });
+    }
     return (
         <div id="terminal">
             <div id="terminal-content">
                 <p>
                     /*<br />
                     TODO<br />
-                    [x] - Cool landing page<br />
+                    [{doneLoading ? "x" : " "}] - Cool landing page<br />
                     [ ] - Experience<br />
                     [ ] - Projects<br />
                     */
                 </p>
                 <ul>
-                    <li className="code-row">
-                        <h3 className="code-arrow-right">{`>`}</h3>
-                        <h3 className="code-text">document.getElementById("SuperRadFirstName").style.color = "#E6C300";</h3>
-                    </li>
-                    <li className="code-row">
-                        <h3 className="code-arrow-left">{`<`}</h3>
-                        <h3 className="code-text">"#E6C300"</h3>
-                    </li>
+                    {loadPreviousCode(previousCode)}
                     <li className="code-row">
                         <h3 className="code-arrow-right" id="code-arrow-blue">{`>`}</h3>
-                        <h3 className="code-text">document.getElementById("SuperRadFirstName").sty</h3>
+                        <h3 className="code-text">{currentCode}</h3>
                     </li>
                 </ul>
             </div>
