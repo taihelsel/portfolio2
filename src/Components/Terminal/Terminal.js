@@ -17,25 +17,47 @@ function Terminal() {
     useEffect(() => {
         let codeToPrintIndex = 0;
         let letterIndex = 0;
+        let blink = 0;
+        let blinkSets = 0;
         const animationInterval = setInterval(() => {
-            printCode(codeToPrintIndex, letterIndex);
-            if (letterIndex < codeToPrint[codeToPrintIndex].arg.length - 1) {
-                letterIndex++;
-            } else {
-                //check for any more code to print
-                setPreviousCode([...previousCode, codeToPrint[codeToPrintIndex]]);
-                setCurrentCode("");
-                if (codeToPrintIndex < codeToPrint.length - 1) {
-                    //done with current code, print next code
-                    codeToPrintIndex++;
-                    letterIndex = 0;
+            if (blink !== false) {
+                if (blinkSets > 5) {
+                    blink = false;
+                    setCurrentCode("");
                 } else {
-                    //done with loop
-                    setDoneLoading(true);
-                    clearInterval(animationInterval);
+                    if (blinkSets % 2 === 0) {
+                        setCurrentCode("|");
+                    } else {
+                        setCurrentCode("");
+                    }
+                    if (blink < 12) {
+                        blink++;
+                    } else {
+                        blink = 0;
+                        blinkSets++;
+                    }
+                }
+            } else {
+                printCode(codeToPrintIndex, letterIndex);
+                if (letterIndex < codeToPrint[codeToPrintIndex].arg.length - 1) {
+                    letterIndex++;
+                } else {
+                    //check for any more code to print
+                    setPreviousCode([...previousCode, codeToPrint[codeToPrintIndex]]);
+                    setCurrentCode("");
+                    if (codeToPrintIndex < codeToPrint.length - 1) {
+                        //done with current code, print next code
+                        codeToPrintIndex++;
+                        letterIndex = 0;
+                    } else {
+                        //done with loop
+                        setDoneLoading(true);
+                        clearInterval(animationInterval);
+                    }
                 }
             }
-        }, 30);
+
+        }, 20);
     }, []);
 
     const printCode = (codeIndex, letterIndex) => {
