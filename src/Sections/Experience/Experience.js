@@ -94,7 +94,6 @@ function Experience() {
                     <div id="experience-right">
                         {loadSelectedExpData(selectedExp)}
                     </div>
-
                 </div>
             </div>
         </section>

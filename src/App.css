@@ -45,7 +45,7 @@ body {
 }
 
 .section-title hr {
-    width: 40%;
+    width: 125px;
     height: 3px;
     background-color: var(--fc-3);
     margin: -8px 0 0 5px;
