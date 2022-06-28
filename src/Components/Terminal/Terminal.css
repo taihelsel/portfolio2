@@ -62,3 +62,13 @@
 #code-arrow-blue {
     color: var(--fc-3);
 }
+
+
+/*mobile*/
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    #terminal {
+        margin-left: var(--margin-m);
+        margin-right: var(--margin-m);
+    }
+}
