@@ -1,5 +1,11 @@
+import React, { useState } from "react";
 import "./Nav.css";
+
 function Nav() {
+    const [showNav, setShowNav] = useState(false);
+    const handleHamburgerClick = () => {
+        setShowNav(!showNav);
+    }
     return (
         <nav>
             <ul className="nav-section-links">
@@ -19,7 +25,15 @@ function Nav() {
             <div className="nav-resume-btn">
                 <a href="">Resume</a>
             </div>
-        </nav>
+            <div id="nav-hamburger" onClick={handleHamburgerClick}>
+                <svg style={{ display: showNav ? "block" : "none" }} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M4 10h24a2 2 0 0 0 0-4H4a2 2 0 0 0 0 4zm24 4H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4zm0 8H4a2 2 0 0 0 0 4h24a2 2 0 0 0 0-4z" />
+                </svg>
+                <svg style={{ display: showNav ? "none" : "block" }} fill="none" stroke="var(--fc-1)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+            </div>
+        </nav >
     )
 }
 export default Nav;

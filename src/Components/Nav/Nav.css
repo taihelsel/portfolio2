@@ -45,3 +45,26 @@ nav a {
     padding: 12px 24px;
     border-radius: 5px;
 }
+
+#nav-hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+
+/*mobile*/
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    .nav-section-links,
+    .nav-resume-btn {
+        display: none;
+    }
+    #nav-hamburger {
+        display: flex;
+        align-items: center;
+        margin-left: var(--margin-m);
+        fill: var(--fc-1);
+    }
+}
