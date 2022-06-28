@@ -1,4 +1,6 @@
-#Contact {}
+#Contact {
+    padding-bottom: 80px;
+}
 
 #contact-content {
     display: flex;

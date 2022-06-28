@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    background-color: var(--bc-2);
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    color: var(--grey);
+    font-weight: normal;
+    font-size: var(--fs-s);
+}
