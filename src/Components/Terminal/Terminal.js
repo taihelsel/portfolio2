@@ -16,19 +16,19 @@ function Terminal({ colorFirstName, showRadTitle, animateRadTitle }) {
             }
         },
         {
-            arg: `animateRadTitle()";`,
-            result: "animateRadTitle()",
-            exe: function () {
-                setAnimateTitle(true);
-                animateRadTitle();
-            }
-        },
-        {
             arg: `document.getElementById("SuperRadFirstName").style.color = "var(--fc-3)";`,
             result: "var(--fc-3)",
             exe: function () {
                 setNameColored(true);
                 colorFirstName("var(--fc-3)");
+            }
+        },
+        {
+            arg: `animateRadTitle()";`,
+            result: "animateRadTitle()",
+            exe: function () {
+                setAnimateTitle(true);
+                animateRadTitle();
             }
         },
     ]
@@ -105,8 +105,8 @@ function Terminal({ colorFirstName, showRadTitle, animateRadTitle }) {
                     /*<br />
                     TODO<br />
                     [{titleShowing ? "x" : " "}] - Show Title<br />
-                    [{animateTitle ? "x" : " "}] - Animate Title<br />
                     [{nameColored ? "x" : " "}] - Color Name<br />
+                    [{animateTitle ? "x" : " "}] - Animate Title<br />
                     */
                 </p>
                 <ul>
