@@ -32,6 +32,7 @@ function Projects() {
                     </div>
                 </div>
             </div>
+            <div id="projects-divider"></div>
         </section>
     )
 }

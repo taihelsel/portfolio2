@@ -1,6 +1,7 @@
 #Projects {
     width: 100%;
-    height: 100vh;
+    padding-bottom: 150px;
+    position: relative;
 }
 
 #Projects .section-content {
@@ -15,7 +16,7 @@
 
 #projects-right {
     display: flex;
-    flex: 2;
+    width: 50%;
 }
 
 #projects-content {
@@ -72,4 +73,14 @@
     text-decoration: none;
     font-size: var(--fs-m);
     font-weight: bold;
+}
+
+#projects-divider {
+    height: 100%;
+    width: 53vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-color: var(--bc-2);
 }
