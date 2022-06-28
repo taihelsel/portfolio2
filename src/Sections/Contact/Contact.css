@@ -66,3 +66,39 @@
     cursor: pointer;
     align-self: flex-end;
 }
+
+
+/*Mobile*/
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    #Contact {}
+    #contact-content {
+        margin: 40px var(--margin-m) 0 var(--margin-m);
+        flex: 1;
+    }
+    #contact-form {
+        width: 100%;
+    }
+    .contact-form-input-wrapper:nth-child(2) {
+        margin-left: 20px;
+    }
+    .contact-form-row {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .contact-form-input-wrapper {}
+    .contact-form-input-wrapper h3 {
+        font-size: var(--fs-xs);
+        margin: 0 0 7px 0;
+        padding: 0 0 0 5px;
+    }
+    .contact-form-input-wrapper input,
+    .contact-form-input-wrapper textarea {
+        padding: 10px 0 10px 7px;
+        width: 100%;
+    }
+    #contact-form-submit {
+        font-size: var(--fs-s);
+        padding: 10px 30px;
+    }
+}
