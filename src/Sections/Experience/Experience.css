@@ -115,3 +115,41 @@
     margin: 0 0 0 90px;
     padding: 0;
 }
+
+
+/*Mobile */
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    #experience-content {
+        flex-direction: column;
+    }
+    #experience-left,
+    #experience-right {
+        flex: unset;
+    }
+    #experience-controls {
+        margin: 40px 0 0 0;
+        flex-direction: row;
+    }
+    #experience-controls li {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 7px;
+    }
+    #experience-controls-selected::before {
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+    #experience-controls-selected {
+        border-bottom: 2px solid var(--fc-3);
+    }
+    #experience-details {
+        margin: 0;
+    }
+}

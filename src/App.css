@@ -57,7 +57,7 @@ body {
 }
 
 .section-content {
-    margin: 0 140px;
+    margin: 0 var(--margin-d);
     display: flex;
     flex: 1;
 }
@@ -65,4 +65,8 @@ body {
 
 /*Mobile Globals*/
 
-@media only screen and (max-width: 768px) and (min-width: 0px) {}
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+    .section-content {
+        margin: 0 var(--margin-m);
+    }
+}
