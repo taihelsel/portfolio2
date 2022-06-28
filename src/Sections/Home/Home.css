@@ -95,4 +95,11 @@
         font-size: var(--fs-s);
         text-align: center;
     }
+    #home-divider {
+        left: unset;
+        width: 147%;
+        height: 126%;
+        top: 4%;
+        right: -61%;
+    }
 }
