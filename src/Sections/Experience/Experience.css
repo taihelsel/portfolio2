@@ -130,6 +130,7 @@
     #experience-controls {
         margin: 40px 0 0 0;
         flex-direction: row;
+        width: 100%;
     }
     #experience-controls li {
         display: flex;
@@ -140,16 +141,34 @@
         flex-direction: column;
         margin: 0;
         padding-bottom: 7px;
+        border-bottom: 2px solid var(--bc-3);
+    }
+    #experience-controls li a {
+        font-size: var(--fs-s);
     }
     #experience-controls-selected::before {
         width: 0;
         height: 0;
         margin-right: 0;
     }
-    #experience-controls-selected {
+    #experience-controls #experience-controls-selected {
         border-bottom: 2px solid var(--fc-3);
     }
     #experience-details {
         margin: 0;
+        width: 100%;
+    }
+    #experience-details-title {
+        margin-top: 40px;
+        justify-content: space-between;
+        text-align: center;
+    }
+    #experience-details h2 {
+        font-size: var(--fs-m);
+        margin-right: 0;
+    }
+    .experience-details-text {
+        font-size: var(--fs-xs);
+        margin: 0 0 0 30px;
     }
 }
