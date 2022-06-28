@@ -8,6 +8,11 @@
     flex-direction: column;
 }
 
+#projects-left,
+#projects-right {
+    z-index: 1;
+}
+
 #projects-left {
     display: flex;
     flex: 1;
@@ -81,7 +86,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     background-color: var(--bc-2);
 }
 
@@ -102,7 +107,6 @@
         flex: unset;
         margin: 0;
         width: 100%;
-        z-index: 1;
     }
     #project-preview {
         width: 100%;
@@ -132,6 +136,5 @@
         top: unset;
         right: unset;
         height: 50%;
-        z-index: 0;
     }
 }
