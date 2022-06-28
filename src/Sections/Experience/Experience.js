@@ -82,7 +82,7 @@ function Experience() {
         <section id="Experience">
             <div className="section-content">
                 <div className="section-title">
-                    <h1 className="section-title">Experience</h1>
+                    <h1>Experience</h1>
                     <hr />
                 </div>
                 <div id="experience-content">

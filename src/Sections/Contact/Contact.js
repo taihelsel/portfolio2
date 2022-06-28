@@ -5,7 +5,7 @@ function Contact() {
         <section id="Contact">
             <div className="section-content">
                 <div className="section-title">
-                    <h1 className="section-title">Contact</h1>
+                    <h1>Contact</h1>
                     <hr />
                 </div>
             </div>
