@@ -82,6 +82,7 @@
 
 #experience-details-title h2 {
     margin-right: 110px;
+    text-align: center
 }
 
 #experience-details-title p {
@@ -174,5 +175,34 @@
     .experience-details-text {
         font-size: var(--fs-xs);
         margin: 0 0 0 30px;
+    }
+}
+
+
+/*Med */
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+    #Experience {}
+    #experience-content {
+        flex: 1;
+    }
+    #experience-controls {
+        margin: 0;
+    }
+    #experience-details {
+        margin: 0;
+        flex: 1;
+        margin-left: 40px;
+    }
+    #experience-left {
+        align-items: center;
+    }
+    #experience-details-title h2 {
+        margin-right: 0;
+        padding-right: 20px;
+    }
+    .experience-details-text {
+        font-size: var(--fs-s);
+        margin: 0 0 0 50px;
     }
 }
