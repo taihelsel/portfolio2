@@ -7,7 +7,7 @@ function Nav() {
         setShowNav(!showNav);
     }
     return (
-        <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
+        <nav >
             <ul className="nav-section-links">
                 <li>
                     <a className="nav-section-link" href="">About</a>
