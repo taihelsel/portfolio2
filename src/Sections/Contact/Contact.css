@@ -71,7 +71,6 @@
 /*Mobile*/
 
 @media only screen and (max-width: 768px) and (min-width: 0px) {
-    #Contact {}
     #contact-content {
         margin: 40px var(--margin-m) 0 var(--margin-m);
         flex: 1;
@@ -100,5 +99,26 @@
     #contact-form-submit {
         font-size: var(--fs-s);
         padding: 10px 30px;
+    }
+}
+
+
+/*Med */
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+    #contact-content {
+        margin: 80px var(--margin-dm) 0 var(--margin-dm);
+        flex: 1;
+    }
+    #contact-form {
+        width: 100%;
+        max-width: 800px;
+    }
+    .contact-form-row {
+        width: 100%;
+    }
+    .contact-form-input-wrapper input,
+    .contact-form-input-wrapper textarea {
+        width: 100%;
     }
 }
