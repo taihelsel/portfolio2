@@ -7,7 +7,7 @@ function Nav() {
         setShowNav(!showNav);
     }
     return (
-        <nav>
+        <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
             <ul className="nav-section-links">
                 <li>
                     <a className="nav-section-link" href="">About</a>
@@ -47,6 +47,8 @@ function Nav() {
                 >
                     <path d="M18 6 6 18M6 6l12 12" />
                 </svg>
+            </div>
+            <div id="nav-blur" style={{ display: showNav ? "none" : "block" }}>
             </div>
         </nav >
     )
