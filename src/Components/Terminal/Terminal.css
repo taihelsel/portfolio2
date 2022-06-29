@@ -72,3 +72,13 @@
         margin-right: var(--margin-m);
     }
 }
+
+
+/*med*/
+
+@media only screen and (max-width: 1200px) and (min-width: 769px) {
+    #terminal {
+        margin-left: var(--margin-dm);
+        margin-right: var(--margin-dm);
+    }
+}
