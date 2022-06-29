@@ -105,3 +105,27 @@ nav a {
         margin-right: var(--margin-dm);
     }
 }
+
+
+/*large*/
+
+@media only screen and (min-width: 2000px) and (max-width: 2250px) {
+    .nav-section-links {
+        margin-left: var(--margin-ld);
+    }
+    .nav-resume-btn {
+        margin-right: var(--margin-ld);
+    }
+}
+
+
+/*xlarge*/
+
+@media only screen and (min-width: 2250px) {
+    .nav-section-links {
+        margin-left: var(--margin-xld);
+    }
+    .nav-resume-btn {
+        margin-right: var(--margin-xld);
+    }
+}

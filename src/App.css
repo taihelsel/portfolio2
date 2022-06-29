@@ -16,6 +16,8 @@
     --fs-s: 15px;
     --fs-xs: 13px;
     /*margins offsets*/
+    --margin-xld: 13%;
+    --margin-ld: 300px;
     --margin-d: 140px;
     --margin-dm: 80px;
     --margin-m: 25px;
@@ -89,5 +91,23 @@ body {
 @media only screen and (max-width: 1200px) and (min-width: 769px) {
     .section-content {
         margin: 0 var(--margin-dm);
+    }
+}
+
+
+/*large Globals*/
+
+@media only screen and (min-width: 2000px) and (max-width: 2250px) {
+    .section-content {
+        margin: 0 var(--margin-ld);
+    }
+}
+
+
+/*xlarge Globals*/
+
+@media only screen and (min-width: 2250px) {
+    .section-content {
+        margin: 0 var(--margin-xld);
     }
 }
