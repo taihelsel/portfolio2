@@ -142,7 +142,7 @@
 
 /*Med */
 
-@media only screen and (max-width: 1200px) and (min-width: 769px) {
+@media only screen and (max-width: 1350px) and (min-width: 769px) {
     #Projects {
         height: fit-content;
         padding-bottom: 80px;
@@ -189,5 +189,23 @@
         top: unset;
         right: unset;
         height: 50%;
+    }
+}
+
+
+/*Med to Large Fixes */
+
+@media only screen and (min-width: 1350px) and (max-width: 1700px) {
+    #project-preview {
+        max-height: 500px;
+        height: 27vw;
+        width: 40vw;
+    }
+    #projects-right {
+        flex: 1;
+    }
+    #projects-left {
+        flex: 1.3;
+        margin: 0;
     }
 }
