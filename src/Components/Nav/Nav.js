@@ -6,17 +6,20 @@ function Nav() {
     const handleHamburgerClick = () => {
         setShowNav(!showNav);
     }
+    const handleNavLinkClick = () => {
+        if (showNav !== false) setShowNav(false);
+    }
     return (
         <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
             <ul className="nav-section-links" style={showNav ? { display: "block" } : {}}>
                 <li>
-                    <a className="nav-section-link" href="#Experience">Experience</a>
+                    <a onClick={handleNavLinkClick} className="nav-section-link" href="#Experience">Experience</a>
                 </li>
                 <li>
-                    <a className="nav-section-link" href="#Projects">Projects</a>
+                    <a onClick={handleNavLinkClick} className="nav-section-link" href="#Projects">Projects</a>
                 </li>
                 <li>
-                    <a className="nav-section-link" href="#Contact">Contact</a>
+                    <a onClick={handleNavLinkClick} className="nav-section-link" href="#Contact">Contact</a>
                 </li>
             </ul>
             <div className="nav-resume-btn">
