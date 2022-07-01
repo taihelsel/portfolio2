@@ -228,6 +228,13 @@
 /*large*/
 
 @media only screen and (min-width: 2000px) and (max-width: 2250px) {
+    .project {
+        margin-top: 0;
+        padding: 40px 0;
+    }
+    .project:nth-child(odd) {
+        background-color: var(--bc-2);
+    }
     .project-left {
         margin-left: var(--margin-ld);
     }
@@ -249,6 +256,13 @@
 /*xlarge*/
 
 @media only screen and (min-width: 2250px) {
+    .project {
+        margin-top: 0;
+        padding: 40px 0;
+    }
+    .project:nth-child(odd) {
+        background-color: var(--bc-2);
+    }
     .project-left {
         margin-left: var(--margin-xld);
     }
