@@ -6,8 +6,9 @@ module.exports = {
     },
     about: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
     skills: ["VSCode", "React", "HTML", "CSS", "AdobeXD", "Git", "JavaScript", "Node.js"],
-    experienceData: {
-        "Sentry Data Systems": {
+    experience: [
+        {
+            company: "Sentry Data Systems",
             title: "Production Support Analyst",
             date: "June 2019 - Nov 2021",
             desc: [
@@ -18,9 +19,9 @@ module.exports = {
                 "Managed and escalated incidents in order to troubleshoot and resolve high priority issues",
             ],
             skills: "Git, HTML, CSS, JavaScript, Powershell, Confluence & Jira integration, and Ruby",
-            company: "Sentry Data Systems",
         },
-        "RTRT.me": {
+        {
+            company: "RTRT.me",
             title: "Full Stack Developer",
             date: "May 2018 - Nov 2018 ",
             desc: [
@@ -31,9 +32,9 @@ module.exports = {
                 "Optimize JavaScript functions by using the DRY principles",
             ],
             skills: "Node.js, JavaScript, HTML, CSS, Git, MongoDB, MapBox, AdobeXD, and HighCharts",
-            company: "RTRT.me",
         },
-        "Freelance Web Development": {
+        {
+            company: "Freelance Web Development",
             title: "Web Developer",
             date: "Jan 2018 - May 2018",
             desc: [
@@ -44,9 +45,8 @@ module.exports = {
                 "Optimized existing websites to reduce load time",
             ],
             skills: "Node.js, JavaScript, HTML, CSS, Git, AdobeXD, and React.js",
-            company: "Freelance Web Development",
         },
-    },
+    ],
     projects: [
         {
             name: "Node Ardiuno Controller (NAC)",
@@ -56,7 +56,7 @@ module.exports = {
             link: "a",
             img: "",
         },
-                {
+        {
             name: "Node Ardiuno Controller (NAC)",
             desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
             tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",

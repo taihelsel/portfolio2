@@ -1,9 +1,23 @@
 import "./Experience.css";
 import React, { useState } from "react";
-import { experienceData } from "../../portfolioInfo.js";
+import { experience } from "../../portfolioInfo.js";
 function Experience() {
-    const defaultExp = experienceData[Object.keys(experienceData)[0]];
-    const [selectedExp, setSelectedExp] = useState(defaultExp);
+    const [selectedExp, setSelectedExp] = useState(experience[0]);
+
+    const handleControlClick = index => e => {
+        e.preventDefault();
+        if (selectedExp.company !== experience[index].company) {
+            setSelectedExp({ ...experience[index] });
+        }
+    }
+    const loadControls = (expData) => {
+        return expData.map((exp, index) => {
+            const { company } = exp;
+            return (
+                <li key={`exp-control-${company}-${index}`} id={company === selectedExp.company ? "experience-controls-selected" : ""}><a onClick={handleControlClick(index)} href="">{company}</a></li>
+            )
+        });
+    }
     const loadSelectedExpData = (selectedExp) => {
         const { title, date, desc, skills } = selectedExp;
         return (
@@ -24,20 +38,6 @@ function Experience() {
             </div>
         )
     }
-    const handleControlClick = title => e => {
-        e.preventDefault();
-        if (selectedExp.company !== title) {
-            setSelectedExp(experienceData[title]);
-        }
-    }
-    const loadControls = (titles) => {
-        return titles.map((title, index) => {
-            console.log("title", title);
-            return (
-                <li key={`exp-control-${title}-${index}`} id={title === selectedExp.company ? "experience-controls-selected" : ""}><a onClick={handleControlClick(title)} href="">{title}</a></li>
-            )
-        });
-    }
     return (
         <section id="Experience">
             <div className="section-content">
@@ -48,7 +48,7 @@ function Experience() {
                 <div id="experience-content">
                     <div id="experience-left">
                         <ul id="experience-controls">
-                            {loadControls(Object.keys(experienceData))}
+                            {loadControls(experience)}
                         </ul>
                     </div>
                     <div id="experience-right">
