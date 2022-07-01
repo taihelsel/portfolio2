@@ -73,36 +73,47 @@ nav a {
 /*mobile*/
 
 @media only screen and (max-width: 768px) and (min-width: 0px) {
-    .nav-resume-btn,.nav-section-links {
+
+    .nav-resume-btn,
+    .nav-section-links {
         display: none;
     }
-    .nav-section-links{
-        position:fixed;
-        top:-80px;
-        left:0;
-        width:100%;
-        height:100%;
+
+    .nav-section-links {
+        position: fixed;
+        top: -80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
         padding-bottom: 80px;
-        margin:0;
+        margin: 0;
         background-color: var(--bc-1);
     }
-    .nav-section-links li{
+
+    .nav-section-links li {
         display: flex;
         justify-content: center;
-        margin:3px 0 0 0;
+        margin: 0;
     }
-    .nav-section-links li:first-child{
-        margin-top:100%;
+
+    .nav-section-links li:first-child {
+        margin-top: 100%;
     }
-    nav a{
+
+    nav a {
         font-size: var(--fs-l);
+        width: 100%;
+        text-align: center;
+        padding: 7px 0;
     }
+
     #nav-hamburger {
         display: flex;
         align-items: center;
         margin-left: var(--margin-m);
         fill: var(--fc-1);
     }
+
     #nav-blur {
         position: fixed;
         left: 0;
@@ -121,6 +132,7 @@ nav a {
     .nav-section-links {
         margin-left: var(--margin-dm);
     }
+
     .nav-resume-btn {
         margin-right: var(--margin-dm);
     }
@@ -133,6 +145,7 @@ nav a {
     .nav-section-links {
         margin-left: var(--margin-ld);
     }
+
     .nav-resume-btn {
         margin-right: var(--margin-ld);
     }
@@ -145,6 +158,7 @@ nav a {
     .nav-section-links {
         margin-left: var(--margin-xld);
     }
+
     .nav-resume-btn {
         margin-right: var(--margin-xld);
     }
