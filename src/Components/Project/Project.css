@@ -20,27 +20,30 @@
 .project-right {
     z-index: 1;
     width: 48%;
-    padding: 50px;
 }
 
 .project-left {
     display: flex;
     margin-left: var(--margin-d);
+    padding: 50px 50px 50px 0;
 }
 
 .project-right {
     display: flex;
     margin-right: var(--margin-d);
+    padding: 50px 0px 50px 0;
 }
 
 .project:nth-child(odd)>.project-left {
     margin-right: var(--margin-d);
     margin-left: 0;
+    padding: 50px 0px 50px 50px;
 }
 
 .project:nth-child(odd)>.project-right {
     margin-right: 0;
     margin-left: var(--margin-d);
+    padding: 50px 50px 50px 0px;
 }
 
 .project-preview {
@@ -215,20 +218,7 @@
 
 /*Med to Large Fixes */
 
-@media only screen and (min-width: 1350px) and (max-width: 1700px) {
-    .project-preview {
-        max-height: 500px;
-        height: 27vw;
-        width: 40vw;
-    }
-    .project-right {
-        flex: 1;
-    }
-    .project-left {
-        flex: 1.3;
-        margin: 0;
-    }
-}
+@media only screen and (min-width: 1350px) and (max-width: 1700px) {}
 
 
 /*large*/
@@ -246,7 +236,7 @@
     .project:nth-child(odd)>.project-right {
         margin-left: var(--margin-ld);
     }
-    .project-divider{
+    .project-divider {
         display: none;
     }
 }
@@ -267,7 +257,7 @@
     .project:nth-child(odd)>.project-right {
         margin-left: var(--margin-xld);
     }
-    .project-divider{
+    .project-divider {
         display: none;
     }
 }
