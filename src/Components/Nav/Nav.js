@@ -10,7 +10,7 @@ function Nav() {
         if (showNav !== false) setShowNav(false);
     }
     return (
-        <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
+        <nav>
             <ul className="nav-section-links" id={showNav ? "mobile-nav-links" : ""}>
                 <li>
                     <a onClick={handleNavLinkClick} className="nav-section-link" href="#Experience">Experience</a>
