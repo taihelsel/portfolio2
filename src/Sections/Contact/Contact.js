@@ -1,5 +1,6 @@
 import "./Contact.css";
-
+import { contact } from "../../portfolioInfo";
+const { firstname, lastname, email } = contact;
 function Contact() {
     return (
         <section id="Contact">
@@ -14,11 +15,11 @@ function Contact() {
                     <div className="contact-form-row">
                         <div className="contact-form-input-wrapper">
                             <h3>Your Name</h3>
-                            <input type="text" placeholder="Tai Helsel" />
+                            <input type="text" placeholder={`${firstname} ${lastname}`} />
                         </div>
                         <div className="contact-form-input-wrapper">
                             <h3>Email Address</h3>
-                            <input type="text" placeholder="tai.helsel@gmail.com" />
+                            <input type="text" placeholder={email} />
                         </div>
                     </div>
                     <div className="contact-form-row">
