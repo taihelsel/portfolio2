@@ -27,6 +27,7 @@ function Project({ name, desc, tech, github, link }) {
                     </div>
                 </div>
             </div>
+            <div className="project-divider"></div>
         </div>
     )
 }
