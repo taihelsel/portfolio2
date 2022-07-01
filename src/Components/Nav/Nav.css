@@ -73,9 +73,29 @@ nav a {
 /*mobile*/
 
 @media only screen and (max-width: 768px) and (min-width: 0px) {
-    .nav-section-links,
     .nav-resume-btn {
         display: none;
+    }
+    .nav-section-links{
+        position:fixed;
+        top:-80px;
+        left:0;
+        width:100%;
+        height:100%;
+        padding-bottom: 80px;
+        margin:0;
+        background-color: var(--bc-1);
+    }
+    .nav-section-links li{
+        display: flex;
+        justify-content: center;
+        margin:3px 0 0 0;
+    }
+    .nav-section-links li:first-child{
+        margin-top:100%;
+    }
+    nav a{
+        font-size: var(--fs-l);
     }
     #nav-hamburger {
         display: flex;
