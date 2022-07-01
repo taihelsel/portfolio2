@@ -1,46 +1,6 @@
 import "./Experience.css";
 import React, { useState } from "react";
-const experienceData = {
-    "Sentry Data Systems": {
-        title: "Production Support Analyst",
-        date: "June 2019 - November 2021",
-        desc: [
-            "Designed and developed tools that made the daily workload\nmore efficient",
-            "Developed jobs to automate daily tasks",
-            "Performed daily system health checks",
-            "Created documentation for internal tools",
-            "Identify and resolve errors in data ingestion feeds",
-        ],
-        skills: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
-        company: "Sentry Data Systems",
-    },
-    "RTRT.me": {
-        title: "Web Developer",
-        date: "AA 201239 - AAA 2323",
-        desc: [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-        ],
-        skills: "blah blah blah",
-        company: "RTRT.me",
-    },
-    "Freelance Web Development": {
-        title: "Web Developer",
-        date: "BBBB 23232 - BBBB 2323",
-        desc: [
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-            "Lorem ipsum",
-        ],
-        skills: "asdfasdfasdfblah",
-        company: "Freelance Web Development",
-    },
-}
+import experienceData from "../../experienceData.js";
 function Experience() {
     const defaultExp = experienceData[Object.keys(experienceData)[0]];
     const [selectedExp, setSelectedExp] = useState(defaultExp);

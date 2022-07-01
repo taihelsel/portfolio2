@@ -10,9 +10,6 @@ function Nav() {
         <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
             <ul className="nav-section-links">
                 <li>
-                    <a className="nav-section-link" href="">About</a>
-                </li>
-                <li>
                     <a className="nav-section-link" href="">Experience</a>
                 </li>
                 <li>
