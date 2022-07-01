@@ -11,7 +11,7 @@ function Nav() {
     }
     return (
         <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
-            <ul className="nav-section-links" style={showNav ? { display: "block" } : {}}>
+            <ul className="nav-section-links" id={showNav ? "mobile-nav-links" : ""}>
                 <li>
                     <a onClick={handleNavLinkClick} className="nav-section-link" href="#Experience">Experience</a>
                 </li>
