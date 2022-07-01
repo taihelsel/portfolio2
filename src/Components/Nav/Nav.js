@@ -8,7 +8,7 @@ function Nav() {
     }
     return (
         <nav style={{ backgroundColor: showNav ? "var(--bc-1)" : "" }}>
-            <ul className="nav-section-links" style={{ display: showNav ? "block" : "none" }}>
+            <ul className="nav-section-links" style={showNav ? { display: "block" } : {}}>
                 <li>
                     <a className="nav-section-link" href="">Experience</a>
                 </li>
