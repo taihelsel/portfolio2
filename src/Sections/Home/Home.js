@@ -1,12 +1,12 @@
 import "./Home.css";
 import React, { useEffect, useState } from "react";
 import Terminal from "../../Components/Terminal/Terminal";
-import { about, contact } from "../../portfolioInfo";
+import { about, contact,skills } from "../../portfolioInfo";
 const { firstname } = contact;
 function Home() {
-    const titles = ["React", "HTML", "CSS", "Git", "JavaScript", "Node.js"];
+    const titles = [...skills];
     const [showTitle, setShowTitle] = useState(false);
-    const [titleText, setTitleText] = useState("VSCode");
+    const [titleText, setTitleText] = useState(titles[0]);
     const [animateTitle, setAnimateTitle] = useState(false);
     const [firstNameColor, setFirstNameColor] = useState(`var(--fc-1)`);
     const addCharToTitle = (title, charIndex) => {
@@ -21,7 +21,7 @@ function Home() {
             let doneWordInReverse = false;
             let doingWordInReverse = false;
             let donePausing = false;
-            let titleIndex = 0;
+            let titleIndex = 1;
             let pausesBeforeDeletingWord = 0;
             let firstRun = true;
             let doingFirstRun = false;

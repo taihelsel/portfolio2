@@ -5,6 +5,7 @@ module.exports = {
         email: "tai.helsel@gmail.com",
     },
     about: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
+    skills: ["VSCode", "React", "HTML", "CSS", "AdobeXD", "Git", "JavaScript", "Node.js"],
     experienceData: {
         "Sentry Data Systems": {
             title: "Production Support Analyst",
