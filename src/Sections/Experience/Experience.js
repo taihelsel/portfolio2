@@ -1,6 +1,6 @@
 import "./Experience.css";
 import React, { useState } from "react";
-import experienceData from "../../experienceData.js";
+import { experienceData } from "../../portfolioInfo.js";
 function Experience() {
     const defaultExp = experienceData[Object.keys(experienceData)[0]];
     const [selectedExp, setSelectedExp] = useState(defaultExp);

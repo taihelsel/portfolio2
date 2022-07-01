@@ -1,6 +1,8 @@
 import "./Home.css";
 import React, { useEffect, useState } from "react";
 import Terminal from "../../Components/Terminal/Terminal";
+import { about, contact } from "../../portfolioInfo";
+const { firstname } = contact;
 function Home() {
     const titles = ["React", "HTML", "CSS", "Git", "JavaScript", "Node.js"];
     const [showTitle, setShowTitle] = useState(false);
@@ -103,11 +105,11 @@ function Home() {
         <section id="Home">
             <div className="home-left">
                 <div id="home-head-container">
-                    <h1 className="home-title home-head">Hi, I'm </h1><h1 style={{ color: firstNameColor }} className="home-title home-head" id="SuperRadFirstName">&nbsp;Tai</h1>
+                    <h1 className="home-title home-head">Hi, I'm </h1><h1 style={{ color: firstNameColor }} className="home-title home-head" id="SuperRadFirstName">&nbsp;{firstname}</h1>
                 </div>
                 <h2 style={{ display: showTitle ? "block" : "none" }} className="home-title home-subhead" id="SuperRadTitle">I'm creating with {titleText}</h2>
                 <p className="home-body">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                    {about}
                 </p>
             </div>
             <div className="home-right">

@@ -6,7 +6,9 @@
     overflow: hidden;
     position: relative;
 }
-
+#SuperRadFirstName{
+    text-transform: capitalize;
+}
 .home-left {
     display: flex;
     flex-direction: column;
