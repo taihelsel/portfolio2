@@ -69,6 +69,10 @@ nav a {
     z-index: 0;
 }
 
+#mobile-nav-resume-link {
+    display: none;
+}
+
 
 /*mobile*/
 
@@ -79,6 +83,9 @@ nav a {
     }
     #mobile-nav-links {
         display: block;
+    }
+    #mobile-nav-resume-link {
+        display: flex;
     }
     .nav-section-links {
         position: fixed;

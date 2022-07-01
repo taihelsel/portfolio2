@@ -21,6 +21,9 @@ function Nav() {
                 <li>
                     <a onClick={handleNavLinkClick} className="nav-section-link" href="#Contact">Contact</a>
                 </li>
+                <li id="mobile-nav-resume-link">
+                    <a onClick={handleNavLinkClick} className="nav-section-link" href={resume} target="_blank">Resume</a>
+                </li>
             </ul>
             <div className="nav-resume-btn">
                 <a href={resume} target="_blank">Resume</a>
