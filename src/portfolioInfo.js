@@ -46,5 +46,15 @@ module.exports = {
             skills: "Node.js, JavaScript, HTML, CSS, Git, AdobeXD, and React.js",
             company: "Freelance Web Development",
         },
-    }
+    },
+    projects: [
+        {
+            name: "Node Ardiuno Controller (NAC)",
+            desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
+            tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
+            github: "a",
+            link: "a",
+            img: "",
+        },
+    ]
 }

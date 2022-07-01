@@ -1,5 +1,41 @@
 import "./Projects.css";
+import { projects } from "../../portfolioInfo";
 function Projects() {
+    const loadProjects = (projects) => {
+        return projects.map((project, index) => {
+            const { name, desc, tech, github, link } = project;
+            return (
+                <div className="project-content" key={`project-${name}-${index}`}>
+                    <div className="project-left">
+                        <div className="project-preview">
+                        </div>
+                    </div>
+                    <div className="project-right">
+                        <div className="project-details">
+                            <h2 className="project-title">{name}</h2>
+                            <p className="project-text">
+                                {desc}
+                            </p>
+                            <h2 className="project-title">Tech</h2>
+                            <p className="project-text" >
+                                {tech}
+                            </p>
+                            <hr />
+                            <div className="project-links">
+                                {github.length ? (
+                                    <a href={github} target="_blank">GitHub</a>
+                                ) : null}
+                                {link.length ? (
+                                    <a href={link} target="_blank">Live Site</a>
+                                ) : null}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="project-divider"></div>
+                </div>
+            )
+        });
+    }
     return (
         <section id="Projects">
             <div className="section-content">
@@ -7,32 +43,8 @@ function Projects() {
                     <h1>Projects</h1>
                     <hr />
                 </div>
-                <div id="projects-content">
-                    <div id="projects-left">
-                        <div id="project-preview">
-                        </div>
-                    </div>
-                    <div id="projects-right">
-                        <div id="project-details">
-                            <h2 className="project-title">Node Ardiuno Controller (NAC)</h2>
-                            <p className="project-text">
-                                Designed and developed tools that made the daily workload
-                                more efficient. Developed jobs to automate daily tasks. Performed daily system health checks
-                            </p>
-                            <h2 className="project-title">Tech</h2>
-                            <p className="project-text" >
-                                Git, HTML, CSS, JavaScript, Powershell, and Ruby
-                            </p>
-                            <hr />
-                            <div id="project-links">
-                                <a href="">GitHub</a>
-                                <a href="">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {loadProjects(projects)}
             </div>
-            <div id="projects-divider"></div>
         </section>
     )
 }
