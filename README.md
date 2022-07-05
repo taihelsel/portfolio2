@@ -11,12 +11,17 @@
   > "homepage":  "https://*YOUR GITHUB*.github.io/"
  3. Run `npm install`
  4. To start dev server run `npm start`
- 5. To deploy to github pages run `npm deploy`
+ 5. To deploy to github pages run `npm run deploy`
  > To make deployment setup easier, this project uses the [gh-pages](https://github.com/tschaub/gh-pages) package.
- 7. To make a production build run  `npm run deploy`
+ 7. To make a production build run  `npm run build`
 
 # Modifying Template
-To make changes, open the **portfolioInfo.js** file and and see section formatting below.
+To make changes:
+
+ 1. Open the **portfolioInfo_TEMPLATE.js** file.
+ 2. Follow section formatting below.
+ 3. Copy the modified **portfolioInfo_TEMPLATE.js** file contents over to the  **portfolioInfo.js** file .
+ 4. Save the **portfolioInfo.js** file and run the `npm run deploy` command to update your GitHub pages.
 
 ### Home
 The Home section renders three items. Your first name, the **about** content, and the **skills** content. 
