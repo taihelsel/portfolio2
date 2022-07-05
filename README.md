@@ -5,14 +5,14 @@
 ![demo](https://raw.githubusercontent.com/taihelsel/portfolio2/main/portfolio-preview2.PNG)
 
 ##### Table of Contents  
-[Setup](#setup)  
-[Modifying Template](#modifying-template) 
+1. [Setup](#setup)  
+2. [Modifying Template](#modifying-template) 
     - [Home](#home)
     - [Experience](#experience)
     - [Projects](#projects)
     - [Contact](#contact)
     - [Resume](#resume)
-[Styles](#styles)
+3. [Styles](#styles)
     -[Colors](#colors)
     -[Font Sizes](#font-sizes)
     -[Margin Offsets](#margin-offsets)
