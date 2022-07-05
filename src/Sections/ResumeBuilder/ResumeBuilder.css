@@ -15,7 +15,10 @@
 .resume-side-offset {
     margin: 0 50px;
 }
+
+
 /*RESUME HEADER*/
+
 .resume-head {
     display: flex;
     flex-direction: row;
@@ -50,7 +53,10 @@
     height: 7px;
     background-color: black;
 }
+
+
 /*RESUME SECTION*/
+
 .resume-section {
     display: flex;
     flex-direction: row;
@@ -72,7 +78,6 @@
 
 .resume-section-splitter {
     width: 100%;
-    border-radius: 50%;
     background-color: var(--grey);
     border: none;
     height: 1px;
@@ -84,6 +89,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.resume-section-content-item {
+    margin-top: 15px;
 }
 
 .resume-job-company {
@@ -113,4 +122,9 @@
     padding: 0;
     font-size: var(--fs-s);
     list-style: disc;
+}
+
+.resume-job-desc li {
+    font-size: var(--fs-s);
+    font-weight: 400;
 }

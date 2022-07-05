@@ -2,7 +2,7 @@ import "./ResumeBuilder.css"
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useEffect } from "react";
-
+import { experience, contact } from "../../portfolioInfo";
 const captureElement = () => {
     const x = document.getElementById("resume");
     html2canvas(x).then(canvas => {
@@ -19,17 +19,38 @@ function ResumeBuilder() {
     useEffect(() => {
         captureElement();
     }, [])
+    const loadResumeJobDesc = (desc) => {
+        return desc.map(x => {
+            return <li>{x}</li>
+        })
+    }
+    const loadResumeExperience = () => {
+        return experience.map(({ company, title, date, desc }, index) => {
+            return (
+                <li className="resume-section-content-item">
+                    <h2 className="resume-job-company">{company}</h2>
+                    <div className="resume-job-title">
+                        <h3>{title}</h3>
+                        <h3>{date}</h3>
+                    </div>
+                    <ul className="resume-job-desc">
+                        {loadResumeJobDesc(desc)}
+                    </ul>
+                </li>
+            )
+        })
+    }
     return (
         <section id="ResumeBuilder">
             <div id="container"></div>
             <div id="resume">
                 <div className="resume-head resume-side-offset">
-                    <h1>Tai Helsel</h1>
+                    <h1>{contact.firstname}&nbsp;{contact.lastname}</h1>
                     <div className="resume-contact">
                         <hr />
-                        <h3>tai.helsel@gmail.com</h3>
-                        <h3>2536708508</h3>
-                        <h3>Jupiter, FL</h3>
+                        <h3>{contact.email}</h3>
+                        <h3>{contact.github}</h3>
+                        <h3>{contact.location}</h3>
                     </div>
                 </div>
                 <div className="resume-section resume-side-offset">
@@ -38,20 +59,7 @@ function ResumeBuilder() {
                     </div>
                     <ul className="resume-section-content">
                         <hr className="resume-section-splitter" />
-                        <li>
-                            <h2 className="resume-job-company">Sentry Data Systems</h2>
-                            <div className="resume-job-title">
-                                <h3>Production Support Analyst</h3>
-                                <h3>06/2019-10/2021</h3>
-                            </div>
-                            <ul className="resume-job-desc">
-                                <li>Developed tools that helped reduce time spent on daily tasks by up to 50</li>
-                                <li>Performed daily system health checks</li>
-                                <li>Created documentation for internal tools</li>
-                                <li>Identified and resolved errors in data ingestion feeds</li>
-                                <li>Managed and escalated incidents in order to troubleshoot and resolve high priority issues</li>
-                            </ul>
-                        </li>
+                        {loadResumeExperience()}
                     </ul>
                 </div>
             </div>

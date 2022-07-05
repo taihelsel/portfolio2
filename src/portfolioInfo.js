@@ -3,6 +3,8 @@ module.exports = {
         firstname: "Tai",
         lastname: "Helsel",
         email: "tai.helsel@gmail.com",
+        github: "github.com/taihelsel/",
+        location: "Jupiter, FL",
         emailType: "local", //local or sever
     },
     about: "I enjoy utilizing JavaScript to build engaging full stack applications. Most recently, I've been connecting IOT devices with Node.js servers to solve real world problems.",
