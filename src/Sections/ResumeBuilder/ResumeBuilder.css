@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
     padding-top: 50px;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .resume-section-content-item {
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 .resume-job-company {
@@ -128,7 +128,7 @@
 .resume-job-desc li {
     font-size: var(--fs-s);
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .resume-section-skills {
@@ -153,13 +153,13 @@
 }
 
 .resume-projects-container {
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
     list-style: none;
 }
 
 .resume-project-item {
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .resume-project-name,

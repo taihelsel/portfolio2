@@ -52,7 +52,7 @@ module.exports = {
             skills: "Node.js, JavaScript, HTML, CSS, Git, MongoDB, MapBox, AdobeXD, and HighCharts",
         },
         {
-            company: "Freelance Web Development",
+            company: "Freelance",
             title: "Web Developer",
             date: "Jan 2018 - May 2018",
             desc: [
@@ -68,17 +68,17 @@ module.exports = {
     projects: [
         {
             name: "Node Ardiuno Controller (NAC)",
-            desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
-            tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
-            github: "github.com/taihelsel/a",
-            link: "a",
+            desc: "A web application that uses Node.js and React.js to interface with an Arduino board. The Arduino board is connected to an IR Blaster that sends signals to an AC unit.",
+            tech: "React, Node.js, Express.js,JavaScript, HTML, CSS, Git, Arduino, Raspberry Pi, and Linux Server ",
+            github: "https://github.com/taihelsel/NodeArduinoController",
+            link: "",
             img: "",
         },
         {
-            name: "Example Second Project",
-            desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
-            tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
-            github: "github.com/taihelsel/a",
+            name: "SoundClout",
+            desc: "This project was built to track data changes on songs posted from SoundCloud. The project scrapes data from SoundCloud and then uses React.js to display the data in a graph.",
+            tech: "React, Node.js, Express.js, HTML, CSS, Git, and JavaScript",
+            github: "https://github.com/taihelsel/soundclout",
             link: "a",
             img: "",
         },
