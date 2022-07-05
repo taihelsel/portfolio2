@@ -18,13 +18,39 @@
 # Modifying Template
 To make changes, open the **portfolioInfo.js** file and and see section formatting below.
 
-##  Contact Information
-
-## Home
+### Home
 The Home section renders three items. Your first name, the **about** content, and the **skills** content. 
 
-- See the *Contact* section for making changes to your contact information	
+- See the *[Contact](https://github.com/taihelsel/portfolio2#contact)* section for making changes to your contact information	
  - To change the skills shown in the typing animation, modify the **skills** property. It expects an array with a length greater than 2.
-	> ex) skills: ["HTML",  "CSS", "etc"]
+	> ex) `skills: ["HTML",  "CSS", "etc"],`
 - To change the About snippet, modify the **about** property. It expects a string with a length greater than 0.
-	> ex) about: "Hello world"
+	> ex) `about: "Hello world",`
+
+### Experience
+The Experience section renders an array of items from the **experience** property.
+
+- Each **company** property will be used as a button for the experience section controls.
+- The **desc** property expects an array of strings.
+- The **company**, **title**, **date**, and **skills** properties all expect a string.
+- The **experience** property expects an array of objects.
+
+> example experience format: 
+```
+experience: [
+	{
+	    company:  "Very Real Co.",
+	    title:  "CEO",
+	    date:  "June 1900 - Nov 2022",
+	    desc: [
+		    "Created Company",
+		    "Performed very real tasks",
+	    ],
+		skills:  "skill one, skill two, skill 3",
+	},
+]
+```
+
+### Projects
+
+### Contact
