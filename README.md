@@ -54,12 +54,11 @@ experience: [
 ### Projects
 The Projects section renders an array of objects from the **projects** property.
 
-- Each **company** property will be used as a button for the experience section controls.
 - **all** properties expect a string.
-- The **github**, **link**, and **img** property are optionally rendered. To prevent these from being displayed, used an empty string as a value. 
+- The **github**, **link**, and **img** property are optionally rendered. To prevent these from being displayed, use an empty string as a value. 
 - Providing an empty string to the **img** property will render a placeholder div.
 
-> example experience item: 
+> example projects item: 
 ```
 projects: [
     {
@@ -71,5 +70,5 @@ projects: [
         img: "https://raw.githubusercontent.com/taihelsel/portfolio2/main/portfolio-preview2.PNG",
     },
 ]
-  
+```
 ### Contact
