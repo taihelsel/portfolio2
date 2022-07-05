@@ -91,6 +91,8 @@ contact: {
     emailType: "local",
 },
 ```
+### Resume
+To add your own resume, replace the **resume.pdf** file with your own.
 
 # Styles
 ### Colors
