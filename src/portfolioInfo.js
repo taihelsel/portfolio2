@@ -80,7 +80,7 @@ module.exports = {
             desc: "This project was built to track data changes on songs posted from SoundCloud. The project scrapes data from SoundCloud and then uses React.js to display the data in a graph.",
             tech: "React, Node.js, Express.js, HTML, CSS, Git, and JavaScript",
             github: "https://github.com/taihelsel/soundclout",
-            link: "a",
+            link: "",
             img: "",
         },
     ]
