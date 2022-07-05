@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import resume from "../../resume.pdf";
-function Nav() {
+function Nav({ handleResumeClick }) {
     const [showNav, setShowNav] = useState(false);
     const handleHamburgerClick = () => {
         setShowNav(!showNav);
@@ -21,12 +20,12 @@ function Nav() {
                 <li>
                     <a onClick={handleNavLinkClick} className="nav-section-link" href="#Contact">Contact</a>
                 </li>
-                <li id="mobile-nav-resume-link">
-                    <a onClick={handleNavLinkClick} className="nav-section-link" href={resume} target="_blank">Resume</a>
+                <li id="mobile-nav-resume-link" onClick={handleResumeClick}>
+                    <a onClick={handleNavLinkClick} className="nav-section-link" >Resume</a>
                 </li>
             </ul>
-            <div className="nav-resume-btn">
-                <a href={resume} target="_blank">Resume</a>
+            <div className="nav-resume-btn" onClick={handleResumeClick}>
+                <a>Resume</a>
             </div>
             <div id="nav-hamburger" onClick={handleHamburgerClick}>
                 <svg
