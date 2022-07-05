@@ -21,7 +21,7 @@ To make changes, open the **portfolioInfo.js** file and and see section formatti
 ### Home
 The Home section renders three items. Your first name, the **about** content, and the **skills** content. 
 
-- See the *[Contact](https://github.com/taihelsel/portfolio2#contact)* section for making changes to your contact information	
+- The hero name is rendered from the **contact** property. See the *[Contact](https://github.com/taihelsel/portfolio2#contact)* section for making changes to your contact information	
  - To change the skills shown in the typing animation, modify the **skills** property. It expects an array with a length greater than 2.
 	> ex) `skills: ["HTML",  "CSS", "etc"],`
 - To change the About snippet, modify the **about** property. It expects a string with a length greater than 0.
@@ -72,3 +72,17 @@ projects: [
 ]
 ```
 ### Contact
+The Contact section uses the **contact** property values for the contact form. The **firstname** property is also used for the home page header.
+
+- **all** contact properties expect a string.
+- Unless you're using your own mailing system, use "local" as the **emailType** value.
+
+> example contact item: 
+```
+contact: {
+    firstname: "Tai",
+    lastname: "Helsel",
+    email: "tai.helsel@gmail.com",
+    emailType: "local",
+},
+```
