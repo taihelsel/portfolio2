@@ -15,8 +15,12 @@ const captureElement = (handleDownloadDone, resumeDownloadType) => {
             format: [14, 8.5]
         });
         doc.addImage(img, "JPEG", 0, 0, 8.5, 14);
-        if (resumeDownloadType === "pdf") doc.save('test.pdf');
-        else doc.output('dataurlnewwindow');
+        if (resumeDownloadType === "pdf") {
+            doc.save('test.pdf');
+        }
+        else {
+            window.open(URL.createObjectURL(doc.output("blob")));
+        }
         handleDownloadDone();
     })
 }

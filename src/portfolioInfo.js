@@ -1,4 +1,5 @@
 module.exports = {
+    resumeType: "dynamic", // dynamic or local
     contact: {
         firstname: "Tai",
         lastname: "Helsel",

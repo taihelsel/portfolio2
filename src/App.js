@@ -7,15 +7,22 @@ import Projects from './Sections/Projects/Projects';
 import Contact from './Sections/Contact/Contact';
 import Footer from './Sections/Footer/Footer';
 import ResumeBuilder from './Sections/ResumeBuilder/ResumeBuilder';
+import { resumeType } from './portfolioInfo';
 import resume from "./resume.pdf";
 function App() {
   const [resumeDownloadType, setResumeDownloadType] = useState(""); // pdf or new window
   const [showDownloadPrompt, setShowDownloadPrompt] = useState(false);
   const handleResumeClick = () => {
-    setShowDownloadPrompt(true);
+    if (resumeType === "local") {
+      //local resume
+      window.open(resume, "_blank");
+    } else {
+      //dynamically built resume
+      setShowDownloadPrompt(true);
+    }
   }
   const handleDownloadDone = () => {
-    resumeDownloadType("");
+    setResumeDownloadType(false);
   }
   const downloadPrompt = () => {
     const promptResult = window.confirm("You are about to download the Resume.pdf file.\r\nSelect 'Cancel' to view the resume in a new tab instead.");
