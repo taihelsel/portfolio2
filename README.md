@@ -2,6 +2,8 @@
     Tai Helsel Portfolio
 </h1>
 
+![demo](https://raw.githubusercontent.com/taihelsel/portfolio2/main/portfolio-preview2.PNG)
+
 # Setup
 
  1. Fork repo and run git clone
