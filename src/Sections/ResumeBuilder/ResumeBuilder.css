@@ -1,6 +1,5 @@
 #ResumeBuilder {
     width: 100vw;
-    height: 100vh;
     background-color: #f5f5f5;
     position: relative;
     overflow: hidden;
@@ -29,7 +28,7 @@
 
 .resume-head h1 {
     display: flex;
-    font-size: var(--fs-xl);
+    font-size: var(--fs-l);
     font-weight: 700;
     margin: 0 50px 0 0;
 }
@@ -145,7 +144,36 @@
 
 .resume-skill-item {
     font-size: var(--fs-s);
-    font-weight: 400;
+    font-weight: 500;
     text-align: left;
     min-width: 100px;
+}
+
+.resume-projects-container {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resume-project-item {
+    margin-top: 10px;
+}
+
+.resume-project-name,
+.resume-project-github {
+    font-size: var(--fs-s);
+    margin: 0;
+    padding: 0;
+}
+
+.resume-project-github {
+    font-size: var(--fs-xs);
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+.resume-project-desc {
+    font-size: var(--fs-s);
+    margin-top: 10px;
+    padding: 0;
 }

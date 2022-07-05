@@ -8,7 +8,22 @@ module.exports = {
         emailType: "local", //local or sever
     },
     about: "I enjoy utilizing JavaScript to build engaging full stack applications. Most recently, I've been connecting IOT devices with Node.js servers to solve real world problems.",
-    skills: ["VSCode", "React", "HTML", "CSS", "AdobeXD", "Git", "JavaScript", "Node.js"],
+    skills: [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "AdobeXD",
+        "Git",
+        "Linux",
+        "React Native",
+        "Express.js",
+        "Ruby",
+        "MapBox",
+        "SQL",
+        "MongoDB",
+        "Node.js"
+    ],
     experience: [
         {
             company: "Sentry Data Systems",
@@ -55,15 +70,15 @@ module.exports = {
             name: "Node Ardiuno Controller (NAC)",
             desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
             tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
-            github: "a",
+            github: "github.com/taihelsel/a",
             link: "a",
             img: "",
         },
         {
-            name: "Node Ardiuno Controller (NAC)",
+            name: "Example Second Project",
             desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
             tech: "Git, HTML, CSS, JavaScript, Powershell, and Ruby",
-            github: "a",
+            github: "github.com/taihelsel/a",
             link: "a",
             img: "",
         },

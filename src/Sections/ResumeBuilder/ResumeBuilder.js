@@ -2,7 +2,10 @@ import "./ResumeBuilder.css"
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useEffect } from "react";
-import { experience, contact, skills } from "../../portfolioInfo";
+import { experience, contact, skills, projects } from "../../portfolioInfo";
+
+/*PDF CONVERTER*/
+
 const captureElement = () => {
     const x = document.getElementById("resume");
     html2canvas(x).then(canvas => {
@@ -15,46 +18,62 @@ const captureElement = () => {
         // doc.save('test.pdf');
     })
 }
+/*SKILLS*/
+
+const loadResumeSkills = () => {
+    const output = [];
+    for (let i = 0; i < skills.length; i++) {
+        const skill1 = skills[i]
+        const skill2 = skills[i + 1];
+        output.push(
+            <li className="resume-skill-wrapper">
+                <div className="resume-skill-item">•&nbsp;{skill1}</div>
+                {skill2 !== undefined ? (<div className="resume-skill-item">•&nbsp;{skill2}</div>) : null}
+            </li>
+        )
+        i++;
+    }
+    return output;
+}
+/*EXPERIENCE*/
+const loadResumeJobDesc = (desc) => {
+    return desc.map(x => {
+        return <li>{x}</li>
+    })
+}
+const loadResumeExperience = () => {
+    return experience.map(({ company, title, date, desc }, index) => {
+        return (
+            <li className="resume-section-content-item">
+                <h2 className="resume-job-company">{company}</h2>
+                <div className="resume-job-title">
+                    <h3>{title}</h3>
+                    <h3>{date}</h3>
+                </div>
+                <ul className="resume-job-desc">
+                    {loadResumeJobDesc(desc)}
+                </ul>
+            </li>
+        )
+    })
+}
+/*PROJECTS*/
+
+const loadResumeProjects = () => {
+    return projects.map(({ name, desc, github }) => {
+        return (
+            <li className="resume-project-item">
+                <h3 className="resume-project-name">{name}</h3>
+                <h3 className="resume-project-github">{github}</h3>
+                <p className="resume-project-desc">{desc}</p>
+            </li>
+        )
+    })
+}
 function ResumeBuilder() {
     useEffect(() => {
         captureElement();
     }, []);
-    const loadResumeSkills = () => {
-        const output = [];
-        for (let i = 0; i < skills.length; i++) {
-            const skill1 = skills[i]
-            const skill2 = skills[i + 1];
-            output.push(
-                <li className="resume-skill-wrapper">
-                    <div className="resume-skill-item">•&nbsp;{skill1}</div>
-                    {skill2 !== undefined ? (<div className="resume-skill-item">•&nbsp;{skill2}</div>) : null}
-                </li>
-            )
-            i++;
-        }
-        return output;
-    }
-    const loadResumeJobDesc = (desc) => {
-        return desc.map(x => {
-            return <li>{x}</li>
-        })
-    }
-    const loadResumeExperience = () => {
-        return experience.map(({ company, title, date, desc }, index) => {
-            return (
-                <li className="resume-section-content-item">
-                    <h2 className="resume-job-company">{company}</h2>
-                    <div className="resume-job-title">
-                        <h3>{title}</h3>
-                        <h3>{date}</h3>
-                    </div>
-                    <ul className="resume-job-desc">
-                        {loadResumeJobDesc(desc)}
-                    </ul>
-                </li>
-            )
-        })
-    }
     return (
         <section id="ResumeBuilder">
             <div id="container"></div>
@@ -83,6 +102,17 @@ function ResumeBuilder() {
                     <ul className="resume-section-content">
                         <hr className="resume-section-splitter" />
                         {loadResumeExperience()}
+                    </ul>
+                </div>
+                <div className="resume-section resume-side-offset">
+                    <div className="resume-section-title">
+                        <h3>Projects</h3>
+                    </div>
+                    <ul className="resume-section-content">
+                        <hr className="resume-section-splitter" />
+                        <ul className="resume-projects-container">
+                            {loadResumeProjects()}
+                        </ul>
                     </ul>
                 </div>
             </div>
