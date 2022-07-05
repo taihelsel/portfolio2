@@ -1,6 +1,7 @@
 <h1 align="center">
     Tai Helsel Portfolio
 </h1>
+
 # Setup
 
  1. Fork repo and run git clone
