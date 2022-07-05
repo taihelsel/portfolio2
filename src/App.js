@@ -9,20 +9,20 @@ import Footer from './Sections/Footer/Footer';
 import ResumeBuilder from './Sections/ResumeBuilder/ResumeBuilder';
 import resume from "./resume.pdf";
 function App() {
-  const [downloadResume, setDownloadResume] = useState(false);
+  const [resumeDownloadType, setResumeDownloadType] = useState(""); // pdf or new window
   const [showDownloadPrompt, setShowDownloadPrompt] = useState(false);
   const handleResumeClick = () => {
     setShowDownloadPrompt(true);
   }
   const handleDownloadDone = () => {
-    setDownloadResume(false);
+    resumeDownloadType("");
   }
   const downloadPrompt = () => {
     const promptResult = window.confirm("You are about to download the Resume.pdf file.\r\nSelect 'Cancel' to view the resume in a new tab instead.");
     if (promptResult) {
-      setDownloadResume(true);
+      setResumeDownloadType("pdf");
     } else {
-      window.open(resume, "_blank");
+      setResumeDownloadType("new window");
     }
     setShowDownloadPrompt(false);
   }
@@ -35,7 +35,7 @@ function App() {
       <Contact />
       <Footer />
       {showDownloadPrompt ? downloadPrompt() : null}
-      {downloadResume ? <ResumeBuilder handleDownloadDone={handleDownloadDone} /> : null}
+      {resumeDownloadType.length > 0 ? <ResumeBuilder handleDownloadDone={handleDownloadDone} resumeDownloadType={resumeDownloadType} /> : null}
     </div>
   );
 }

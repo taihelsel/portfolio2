@@ -6,7 +6,7 @@ import { experience, contact, skills, projects } from "../../portfolioInfo";
 
 /*PDF CONVERTER*/
 
-const captureElement = (handleDownloadDone) => {
+const captureElement = (handleDownloadDone, resumeDownloadType) => {
     const x = document.getElementById("resume");
     html2canvas(x).then(canvas => {
         const img = canvas.toDataURL("image/jpeg");
@@ -15,7 +15,8 @@ const captureElement = (handleDownloadDone) => {
             format: [14, 8.5]
         });
         doc.addImage(img, "JPEG", 0, 0, 8.5, 14);
-        doc.save('test.pdf');
+        if (resumeDownloadType === "pdf") doc.save('test.pdf');
+        else doc.output('dataurlnewwindow');
         handleDownloadDone();
     })
 }
@@ -71,9 +72,9 @@ const loadResumeProjects = () => {
         )
     })
 }
-function ResumeBuilder({ handleDownloadDone }) {
+function ResumeBuilder({ handleDownloadDone, resumeDownloadType }) {
     useEffect(() => {
-        captureElement(handleDownloadDone);
+        captureElement(handleDownloadDone, resumeDownloadType);
     }, []);
     return (
         <section id="ResumeBuilder">
