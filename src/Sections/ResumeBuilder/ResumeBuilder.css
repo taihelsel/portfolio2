@@ -60,6 +60,7 @@
 .resume-section {
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .resume-section-title {
@@ -127,4 +128,24 @@
 .resume-job-desc li {
     font-size: var(--fs-s);
     font-weight: 400;
+}
+
+.resume-section-skills {
+    display: flex;
+    width: 65%;
+    list-style: disc;
+}
+
+.resume-skill-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-skill-item {
+    font-size: var(--fs-s);
+    font-weight: 400;
+    text-align: left;
+    min-width: 100px;
 }

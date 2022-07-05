@@ -2,7 +2,7 @@ import "./ResumeBuilder.css"
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useEffect } from "react";
-import { experience, contact } from "../../portfolioInfo";
+import { experience, contact, skills } from "../../portfolioInfo";
 const captureElement = () => {
     const x = document.getElementById("resume");
     html2canvas(x).then(canvas => {
@@ -18,7 +18,22 @@ const captureElement = () => {
 function ResumeBuilder() {
     useEffect(() => {
         captureElement();
-    }, [])
+    }, []);
+    const loadResumeSkills = () => {
+        const output = [];
+        for (let i = 0; i < skills.length; i++) {
+            const skill1 = skills[i]
+            const skill2 = skills[i + 1];
+            output.push(
+                <li className="resume-skill-wrapper">
+                    <div className="resume-skill-item">•&nbsp;{skill1}</div>
+                    {skill2 !== undefined ? (<div className="resume-skill-item">•&nbsp;{skill2}</div>) : null}
+                </li>
+            )
+            i++;
+        }
+        return output;
+    }
     const loadResumeJobDesc = (desc) => {
         return desc.map(x => {
             return <li>{x}</li>
@@ -52,6 +67,14 @@ function ResumeBuilder() {
                         <h3>{contact.github}</h3>
                         <h3>{contact.location}</h3>
                     </div>
+                </div>
+                <div className="resume-section resume-side-offset">
+                    <div className="resume-section-title">
+                        <h3>Skills</h3>
+                    </div>
+                    <ul className="resume-section-content resume-section-skills">
+                        {loadResumeSkills()}
+                    </ul>
                 </div>
                 <div className="resume-section resume-side-offset">
                     <div className="resume-section-title">
