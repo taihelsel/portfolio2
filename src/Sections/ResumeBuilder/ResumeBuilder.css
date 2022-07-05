@@ -1,14 +1,18 @@
 #ResumeBuilder {
-    width: 100vw;
+    min-height: 100vw;
+    min-height: 100vh;
     background-color: #f5f5f5;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: -1;
 }
 
 #resume {
     width: 8.5in;
     height: 14in;
     margin: 0;
+    position: relative;
 }
 
 .resume-side-offset {

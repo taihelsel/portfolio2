@@ -9,13 +9,13 @@ import ResumeBuilder from './Sections/ResumeBuilder/ResumeBuilder';
 function App() {
   return (
     <div className="App">
-      {/* <Nav />
+      <Nav />
       <Home />
       <Experience />
       <Projects />
       <Contact />
-      <Footer /> */}
       <ResumeBuilder />
+      <Footer />
     </div>
   );
 }
