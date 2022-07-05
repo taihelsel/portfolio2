@@ -4,6 +4,19 @@
 
 ![demo](https://raw.githubusercontent.com/taihelsel/portfolio2/main/portfolio-preview2.PNG)
 
+##### Table of Contents  
+[Setup](#setup)  
+[Modifying Template](#modifying-template) 
+    - [Home](#home)
+    - [Experience](#experience)
+    - [Projects](#projects)
+    - [Contact](#contact)
+    - [Resume](#resume)
+[Styles](#styles)
+    -[Colors](#colors)
+    -[Font Sizes](#font-sizes)
+    -[Margin Offsets](#margin-offsets)
+
 # Setup
 
  1. Fork repo and run git clone.
@@ -92,7 +105,7 @@ contact: {
 },
 ```
 ### Resume
-To add your own resume, replace the **resume.pdf** file with your own.
+To add your own resume, replace the **resume.pdf** file with your own. It must have the **exact** same name as the existing resume.
 
 # Styles
 ### Colors
@@ -105,7 +118,7 @@ To add your own resume, replace the **resume.pdf** file with your own.
 | Font Color 2 | `#FFE16D` |
 | Font Color 3 | `#3FB1B1` |
 | Generic Grey | `#8B8B8B` |
-### Font Size
+### Font Sizes
 | Type | Size|
 |--|--|
 |  XL | 80px |
