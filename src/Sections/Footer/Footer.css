@@ -13,7 +13,20 @@ footer h3 {
     font-size: var(--fs-s);
 }
 
-
+#footer-fork{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#footer-fork svg{
+    margin:0 5px 0 25px;
+}
+footer a {
+    color: var(--grey);
+    font-weight: normal;
+    font-size: var(--fs-s);
+}
 /*Mobile*/
 
 @media only screen and (max-width: 768px) and (min-width: 0px) {
