@@ -13,9 +13,9 @@
     - [Contact](#contact)
     - [Resume](#resume)
 3. [Styles](#styles)
-    -[Colors](#colors)
-    -[Font Sizes](#font-sizes)
-    -[Margin Offsets](#margin-offsets)
+    - [Colors](#colors)
+    - [Font Sizes](#font-sizes)
+    - [Margin Offsets](#margin-offsets)
 
 # Setup
 
