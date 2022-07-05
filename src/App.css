@@ -16,11 +16,11 @@
     --fs-s: 15px;
     --fs-xs: 13px;
     /*margins offsets*/
-    --margin-xld: 13%;
-    --margin-ld: 300px;
-    --margin-d: 140px;
-    --margin-dm: 80px;
-    --margin-m: 25px;
+    --margin-xld: 13%;  /*xlarge desktop*/
+    --margin-ld: 300px; /*large desktop*/
+    --margin-d: 140px; /*desktop*/
+    --margin-dm: 80px; /*desktop med*/
+    --margin-m: 25px; /*mobile*/
 }
 
 html,

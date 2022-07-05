@@ -3,9 +3,9 @@ module.exports = {
         firstname: "Tai",
         lastname: "Helsel",
         email: "tai.helsel@gmail.com",
-        emailType:"local", //local or sever
+        emailType: "local", //local or sever
     },
-    about: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
+    about: "I enjoy utilizing JavaScript to build engaging full stack applications. Most recently, I've been connecting IOT devices with Node.js servers to solve real world problems.",
     skills: ["VSCode", "React", "HTML", "CSS", "AdobeXD", "Git", "JavaScript", "Node.js"],
     experience: [
         {
