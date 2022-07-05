@@ -28,7 +28,7 @@ The Home section renders three items. Your first name, the **about** content, an
 	> ex) `about: "Hello world",`
 
 ### Experience
-The Experience section renders an array of items from the **experience** property.
+The Experience section renders an array of objects from the **experience** property.
 
 - Each **company** property will be used as a button for the experience section controls.
 - The **desc** property expects an array of strings.
@@ -52,5 +52,24 @@ experience: [
 ```
 
 ### Projects
+The Projects section renders an array of objects from the **projects** property.
 
+- Each **company** property will be used as a button for the experience section controls.
+- **all** properties expect a string.
+- The **github**, **link**, and **img** property are optionally rendered. To prevent these from being displayed, used an empty string as a value. 
+- Providing an empty string to the **img** property will render a placeholder div.
+
+> example experience item: 
+```
+projects: [
+    {
+        name: "Portfliov2",
+        desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it",
+        tech: "HTML, CSS, JavaScript, and React",
+        github: "https://github.com/taihelsel/portfolio2",
+        link: "https://taihelsel.github.io/portfolio2/",
+        img: "https://raw.githubusercontent.com/taihelsel/portfolio2/main/portfolio-preview2.PNG",
+    },
+]
+  
 ### Contact
