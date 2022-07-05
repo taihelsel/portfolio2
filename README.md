@@ -14,3 +14,17 @@
  5. To deploy to github pages run `npm deploy`
  > To make deployment setup easier, this project uses the [gh-pages](https://github.com/tschaub/gh-pages) package.
  7. To make a production build run  `npm run deploy`
+
+# Modifying Template
+To make changes, open the **portfolioInfo.js** file and and see section formatting below.
+
+##  Contact Information
+
+## Home
+The Home section renders three items. Your first name, the **about** content, and the **skills** content. 
+
+- See the *Contact* section for making changes to your contact information	
+ - To change the skills shown in the typing animation, modify the **skills** property. It expects an array with a length greater than 2.
+	> ex) skills: ["HTML",  "CSS", "etc"]
+- To change the About snippet, modify the **about** property. It expects a string with a length greater than 0.
+	> ex) about: "Hello world"
