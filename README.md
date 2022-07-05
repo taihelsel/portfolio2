@@ -91,3 +91,34 @@ contact: {
     emailType: "local",
 },
 ```
+
+# Styles
+### Colors
+| Type | Hex |
+|--|--|
+| Background Color 1 | `#330D64` |
+| Background Color 2 | `#300B5F` |
+| Background Color 3 | `#250A4A` |
+| Font Color 1 | `#FDF8DF` |
+| Font Color 2 | `#FFE16D` |
+| Font Color 3 | `#3FB1B1` |
+| Generic Grey | `#8B8B8B` |
+### Font Size
+| Type | Size|
+|--|--|
+|  XL | 80px |
+|  L | 62px|
+|  M | 20px |
+|  S | 15px |
+|  XS | 13px |
+
+### Margin Offsets
+> Used to keep content centered on page.
+
+| Type | Horizontal Margin|
+|--|--|
+| XLarge Desktop | `13%` |
+| Large Desktop | `300px` |
+| Desktop | `140px` |
+| Med Desktop | `80px` |
+| Mobile | `25px` |
