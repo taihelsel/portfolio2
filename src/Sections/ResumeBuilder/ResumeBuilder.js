@@ -15,7 +15,7 @@ const captureElement = () => {
             format: [14, 8.5]
         });
         doc.addImage(img, "JPEG", 0, 0, 8.5, 14);
-        // doc.save('test.pdf');
+        doc.save('test.pdf');
     })
 }
 /*SKILLS*/
