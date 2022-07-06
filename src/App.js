@@ -10,28 +10,18 @@ import ResumeBuilder from './Sections/ResumeBuilder/ResumeBuilder';
 import { resumeType } from './portfolioInfo';
 import resume from "./resume.pdf";
 function App() {
-  const [resumeDownloadType, setResumeDownloadType] = useState(""); // pdf or new window
-  const [showDownloadPrompt, setShowDownloadPrompt] = useState(false);
+  const [downloadResume, setDownloadResume] = useState(false);
   const handleResumeClick = () => {
     if (resumeType === "local") {
       //local resume
       window.open(resume, "_blank");
     } else {
       //dynamically built resume
-      setShowDownloadPrompt(true);
+      setDownloadResume(true);
     }
   }
   const handleDownloadDone = () => {
-    setResumeDownloadType(false);
-  }
-  const downloadPrompt = () => {
-    const promptResult = window.confirm("You are about to download the Resume.pdf file.\r\nSelect 'Cancel' to view the resume in a new tab instead.");
-    if (promptResult) {
-      setResumeDownloadType("pdf");
-    } else {
-      setResumeDownloadType("new window");
-    }
-    setShowDownloadPrompt(false);
+    setDownloadResume(false);
   }
   return (
     <div className="App">
@@ -41,8 +31,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-      {showDownloadPrompt ? downloadPrompt() : null}
-      {resumeDownloadType.length > 0 ? <ResumeBuilder handleDownloadDone={handleDownloadDone} resumeDownloadType={resumeDownloadType} /> : null}
+      {downloadResume ? <ResumeBuilder handleDownloadDone={handleDownloadDone} /> : null}
     </div>
   );
 }
