@@ -4,7 +4,7 @@ module.exports = {
         firstname: "Tai",
         lastname: "Helsel",
         email: "tai.helsel@gmail.com",
-        github: "github.com/taihelsel/",
+        github: "github.com/taihelsel/", //do not include https://www
         website: "taihelsel.com",
         location: "Jupiter, FL",
         emailType: "local", //local or sever
