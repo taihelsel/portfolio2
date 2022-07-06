@@ -16,7 +16,7 @@ const captureElement = (handleDownloadDone, resumeDownloadType) => {
         });
         doc.addImage(img, "JPEG", 0, 0, 8.5, 14);
         if (resumeDownloadType === "pdf") {
-            doc.save(`${firstname} ${lastname}'s Resume.pdf`);
+            doc.save(`${contact.firstname} ${contact.lastname}'s Resume.pdf`);
         }
         else {
             window.open(URL.createObjectURL(doc.output("blob")));
