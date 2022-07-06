@@ -1,8 +1,11 @@
 module.exports = {
+    resumeType: "local",
     contact: {
         firstname: "",
         lastname: "",
         email: "",
+        github: "",
+        location: "",
         emailType: "local",
     },
     about: "",
