@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import { contact } from "../../portfolioInfo";
 function Nav({ handleResumeClick }) {
     const [showNav, setShowNav] = useState(false);
     const handleHamburgerClick = () => {
@@ -19,6 +20,9 @@ function Nav({ handleResumeClick }) {
                 </li>
                 <li>
                     <a onClick={handleNavLinkClick} className="nav-section-link" href="#Contact">Contact</a>
+                </li>
+                <li>
+                    <a onClick={handleNavLinkClick} className="nav-section-link" href={contact.github} target="_blank">GitHub</a>
                 </li>
                 <li id="mobile-nav-resume-link" onClick={handleResumeClick}>
                     <a onClick={handleNavLinkClick} className="nav-section-link" >Resume</a>
