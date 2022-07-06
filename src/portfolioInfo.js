@@ -5,6 +5,7 @@ module.exports = {
         lastname: "Helsel",
         email: "tai.helsel@gmail.com",
         github: "github.com/taihelsel/",
+        website: "taihelsel.com",
         location: "Jupiter, FL",
         emailType: "local", //local or sever
     },
@@ -73,7 +74,7 @@ module.exports = {
             tech: "React, Node.js, Express.js,JavaScript, HTML, CSS, Git, Arduino, Raspberry Pi, and Linux Server ",
             github: "https://github.com/taihelsel/NodeArduinoController",
             link: "",
-            img: "",
+            img: "https://raw.githubusercontent.com/taihelsel/NodeArduinoController/main/previewImgs/ac-control-1.PNG",
         },
         {
             name: "SoundClout",
@@ -81,7 +82,7 @@ module.exports = {
             tech: "React, Node.js, Express.js, HTML, CSS, Git, and JavaScript",
             github: "https://github.com/taihelsel/soundclout",
             link: "",
-            img: "",
+            img: "https://camo.githubusercontent.com/cf316c0a018cb91973d46b421cb7364ae3b17d676fd98bbd4dd567fb1c689eb2/68747470733a2f2f692e696d6775722e636f6d2f686836495365392e706e67",
         },
     ]
 }

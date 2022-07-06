@@ -49,8 +49,19 @@
 .project-preview {
     width: 700px;
     height: 400px;
-    background-color: white;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-preview img {
+    height: 100%;
+    width: auto;
+}
+
+.project-preview-blank {
+    background-color: var(--fc-1);
 }
 
 .project-details {

@@ -85,6 +85,7 @@ function ResumeBuilder({ handleDownloadDone }) {
                         <hr />
                         <h3>{contact.email}</h3>
                         <h3>{contact.github}</h3>
+                        <h3>{contact.website}</h3>
                         <h3>{contact.location}</h3>
                     </div>
                 </div>

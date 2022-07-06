@@ -1,10 +1,14 @@
 import "./Project.css";
-function Project({ name, desc, tech, github, link }) {
+function Project({ name, desc, tech, github, link, img }) {
     return (
         <div className="project">
             <div className="project-left">
-                <div className="project-preview">
-                </div>
+                {img ? (
+                    <div className="project-preview">
+                        <img src={img} />
+                    </div>
+                ) : <div className="project-preview project-preview-blank"> </div>}
+
             </div>
             <div className="project-right">
                 <div className="project-details">
