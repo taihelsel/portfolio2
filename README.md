@@ -106,6 +106,7 @@ contact: {
 ```
 ### Resume
 To add your own resume, replace the **resume.pdf** file with your own. It must have the **exact** same name as the existing resume.
+> Dynamically created resumes from the portfolioInfo.js file are a work in progress. This is not a supported feature, but you can test it by changing the **resumeType** value to *dynamic*.
 
 # Styles
 ### Colors
