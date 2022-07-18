@@ -1,6 +1,7 @@
 import "./Projects.css";
 import Project from "../../Components/Project/Project";
-import { projects } from "../../portfolioInfo";
+import { additionalProjects, resumeProjects } from "../../portfolioInfo";
+const projects = [...resumeProjects, ...additionalProjects];
 function Projects() {
     const loadProjects = (projects) => {
         return projects.map((project, index) => {

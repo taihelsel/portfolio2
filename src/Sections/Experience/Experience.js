@@ -1,6 +1,7 @@
 import "./Experience.css";
 import React, { useState } from "react";
-import { experience } from "../../portfolioInfo.js";
+import { resumeExperience, additionalExperience } from "../../portfolioInfo.js";
+const experience = [...resumeExperience, ...additionalExperience];
 function Experience() {
     const [selectedExp, setSelectedExp] = useState(experience[0]);
 

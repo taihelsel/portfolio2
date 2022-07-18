@@ -123,7 +123,7 @@
 }
 
 .resume-job-desc {
-    margin: 15px 0 0 50px;
+    margin: 8px 0 0 50px;
     padding: 0;
     font-size: var(--fs-s);
     list-style: disc;
@@ -132,7 +132,7 @@
 .resume-job-desc li {
     font-size: var(--fs-s);
     font-weight: 400;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 }
 
 .resume-section-skills {

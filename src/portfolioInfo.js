@@ -26,11 +26,26 @@ module.exports = {
         "MongoDB",
         "Node.js"
     ],
-    experience: [
+    resumeExperience: [
+        {
+            company: "Seven Cells",
+            title: "Lead Fullstack Developer",
+            date: "July 2022 - Present",
+            desc: [
+                "Established MVP for new products, spearheaded the development of the product's entire stack.",
+                "Managed transition between previous development teams to ensure smooth product development.",
+                "Conducted technical interviews with potential developers to ensure they meet the company's needs.",
+                "Worked with customer support to establish a pipleine for dealing with customer issues.",
+                "Designed user interfaces for the product's web and mobile applications.",
+                "Improved exsiting applications fixing bugs and writing technical documentation.",
+                "Established onboarding process for new developers to ensure they are briefed on the product's features and how to use it.",
+            ],
+            skills: "Git, HTML, CSS, JavaScript, React, Node.js, and Express.js",
+        },
         {
             company: "Sentry Data Systems",
             title: "Production Support Analyst",
-            date: "June 2019 - Nov 2021",
+            date: "June 2019 - June 2022",
             desc: [
                 "Developed tools that helped reduce time spent on daily tasks by up to 50%",
                 "Performed daily system health checks",
@@ -67,7 +82,9 @@ module.exports = {
             skills: "Node.js, JavaScript, HTML, CSS, Git, AdobeXD, and React.js",
         },
     ],
-    projects: [
+    additionalExperience: [],
+    resumeProjects: [],
+    additionalProjects: [
         {
             name: "Node Ardiuno Controller (NAC)",
             desc: "A web application that uses Node.js and React.js to interface with an Arduino board. The Arduino board is connected to an IR Blaster that sends signals to an AC unit.",
@@ -84,5 +101,6 @@ module.exports = {
             link: "",
             img: "https://camo.githubusercontent.com/cf316c0a018cb91973d46b421cb7364ae3b17d676fd98bbd4dd567fb1c689eb2/68747470733a2f2f692e696d6775722e636f6d2f686836495365392e706e67",
         },
-    ]
+    ],
+
 }

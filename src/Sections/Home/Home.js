@@ -1,7 +1,7 @@
 import "./Home.css";
 import React, { useEffect, useState } from "react";
 import Terminal from "../../Components/Terminal/Terminal";
-import { about, contact,skills } from "../../portfolioInfo";
+import { about, contact, skills } from "../../portfolioInfo";
 const { firstname } = contact;
 function Home() {
     const titles = [...skills];

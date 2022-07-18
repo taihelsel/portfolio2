@@ -9,8 +9,8 @@ module.exports = {
         emailType: "local",
     },
     about: "",
-    skills: ["",""],
-    experience: [
+    skills: ["", ""],
+    resumeExperience: [
         {
             company: "",
             title: "",
@@ -22,7 +22,29 @@ module.exports = {
             skills: "",
         },
     ],
-    projects: [
+    resumeProjects: [
+        {
+            name: "",
+            desc: "",
+            tech: "",
+            github: "",
+            link: "",
+            img: "",
+        },
+    ],
+    additionalExperience: [
+        {
+            company: "",
+            title: "",
+            date: "",
+            desc: [
+                "",
+                "",
+            ],
+            skills: "",
+        },
+    ],
+    additionalProjects: [
         {
             name: "",
             desc: "",

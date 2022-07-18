@@ -2,7 +2,7 @@ import "./ResumeBuilder.css"
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useEffect } from "react";
-import { experience, contact, skills, projects } from "../../portfolioInfo";
+import { resumeExperience, contact, skills, resumeProjects } from "../../portfolioInfo";
 
 /*PDF CONVERTER*/
 
@@ -36,14 +36,14 @@ const loadResumeSkills = () => {
     }
     return output;
 }
-/*EXPERIENCE*/
+/*Resume Experience*/
 const loadResumeJobDesc = (desc) => {
     return desc.map(x => {
         return <li>{x}</li>
     })
 }
-const loadResumeExperience = () => {
-    return experience.map(({ company, title, date, desc }, index) => {
+const loadResumeresumeExperience = () => {
+    return resumeExperience.map(({ company, title, date, desc }, index) => {
         return (
             <li className="resume-section-content-item">
                 <h2 className="resume-job-company">{company}</h2>
@@ -61,7 +61,7 @@ const loadResumeExperience = () => {
 /*PROJECTS*/
 
 const loadResumeProjects = () => {
-    return projects.map(({ name, desc, github }) => {
+    return resumeProjects.map(({ name, desc, github }) => {
         return (
             <li className="resume-project-item">
                 <h3 className="resume-project-name">{name}</h3>
@@ -103,20 +103,22 @@ function ResumeBuilder({ handleDownloadDone }) {
                     </div>
                     <ul className="resume-section-content">
                         <hr className="resume-section-splitter" />
-                        {loadResumeExperience()}
+                        {loadResumeresumeExperience()}
                     </ul>
                 </div>
-                <div className="resume-section resume-side-offset">
-                    <div className="resume-section-title">
-                        <h3>Projects</h3>
-                    </div>
-                    <ul className="resume-section-content">
-                        <hr className="resume-section-splitter" />
-                        <ul className="resume-projects-container">
-                            {loadResumeProjects()}
+                {resumeProjects.length > 0 ? (
+                    <div className="resume-section resume-side-offset">
+                        <div className="resume-section-title">
+                            <h3>Projects</h3>
+                        </div>
+                        <ul className="resume-section-content">
+                            <hr className="resume-section-splitter" />
+                            <ul className="resume-projects-container">
+                                {loadResumeProjects()}
+                            </ul>
                         </ul>
-                    </ul>
-                </div>
+                    </div>
+                ) : null}
             </div>
         </section>
     )
